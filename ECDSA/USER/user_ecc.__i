@@ -1,0 +1,4 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\KEY -I..\STM32_Cryptographic_Library\inc -I..\ECC -I..\HARDWARE\TIMER -I..\HARDWARE 
+-I K:\KEIL\ARM\RV31\INC 
+-I K:\KEIL\ARM\CMSIS\Include 
+-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o "user_ecc.o" --omf_browse "user_ecc.crf" --depend "user_ecc.d" "..\ECC\user_ecc.c"

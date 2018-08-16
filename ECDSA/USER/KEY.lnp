@@ -1,0 +1,5 @@
+--cpu Cortex-M3 "stm32f10x_it.o" "system_stm32f10x.o" "user_ecc.o" "main2.o" "led.o" "key.o" "timer.o" "delay.o" "sys.o" "usart.o" "core_cm3.o" ".\startup_stm32f10x_md.o" "misc.o" "stm32f10x_crc.o" "stm32f10x_dma.o" "stm32f10x_gpio.o" "stm32f10x_rcc.o" "stm32f10x_tim.o" "stm32f10x_usart.o" K:\«∂»Î Ω\F1_206\STM32_Cryptographic_Library\binary\MK-ARM\M3_CryptoFW_2_0_6.lib 
+--strict --scatter "KEY.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\KEY.map" -o KEY.axf

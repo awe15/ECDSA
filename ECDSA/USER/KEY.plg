@@ -1,0 +1,485 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+K:\嵌入式\F1_206\USER\KEY.uvproj
+Project File Date:  11/22/2017
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+Project build/rebuild aborted.
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(579): error:  #20: identifier "P_256_a" is undefined
+..\ECC\user_ecc.c(580): error:  #20: identifier "P_256_b" is undefined
+..\ECC\user_ecc.c(581): error:  #20: identifier "P_256_p" is undefined
+..\ECC\user_ecc.c(582): error:  #20: identifier "P_256_n" is undefined
+..\ECC\user_ecc.c(583): error:  #20: identifier "P_256_Gx" is undefined
+..\ECC\user_ecc.c(584): error:  #20: identifier "P_256_Gy" is undefined
+..\ECC\user_ecc.c(551): warning:  #550-D: variable "priv_key1" was set but never used
+compiling main2.c...
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+linking...
+KEY.axf: Error: L6218E: Undefined symbol ECCGetPublickeyFromPrivateKey (referred from main2.o).
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+compiling main2.c...
+linking...
+Program Size: Code=8880 RO-data=308 RW-data=56 ZI-data=1760  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(48): error:  #20: identifier "result1" is undefined
+..\ECC\user_ecc.c(49): error:  #20: identifier "P_key" is undefined
+compiling main2.c...
+main2.c(39): warning:  #177-D: variable "i" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+linking...
+Program Size: Code=8560 RO-data=268 RW-data=56 ZI-data=1696  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling user_ecc.c...
+compiling main2.c...
+main2.c(11): error:  #148: variable "InputMessage_192" has already been initialized
+main2.c(29): warning:  #223-D: function "ECCSign" declared implicitly
+main2.c(32): error:  #65: expected a ";"
+main2.c(21): warning:  #177-D: variable "i" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+main2.c(11): error:  #148: variable "InputMessage_192" has already been initialized
+main2.c(29): warning:  #223-D: function "ECCSign" declared implicitly
+main2.c(29): error:  #29: expected an expression
+main2.c(32): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+main2.c(11): error:  #148: variable "InputMessage_192" has already been initialized
+main2.c(29): warning:  #223-D: function "ECCSign" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+compiling main2.c...
+main2.c(11): error:  #148: variable "InputMessage_192" has already been initialized
+main2.c(29): error:  #167: argument of type "const uint8_t *" is incompatible with parameter of type "uint8_t *"
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+main2.c(11): error:  #147: declaration is incompatible with "const uint8_t InputMessage_192[32768]" (declared at line 1659 of "..\HARDWARE\data.h")
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+main2.c(11): error:  #147: declaration is incompatible with "const uint8_t InputMessage_192[32768]" (declared at line 1659 of "..\HARDWARE\data.h")
+main2.c(29): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(78): error:  #20: identifier "InputMessage_192" is undefined
+compiling main2.c...
+main2.c(11): error:  #147: declaration is incompatible with "const uint8_t InputMessage_192[32768]" (declared at line 1659 of "..\HARDWARE\data.h")
+main2.c(29): error:  #167: argument of type "const char *" is incompatible with parameter of type "uint8_t *"
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(78): error:  #20: identifier "InputMessage_192" is undefined
+compiling main2.c...
+main2.c(8): error:  #5: cannot open source input file "data.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(78): error:  #20: identifier "InputMessage_192" is undefined
+compiling main2.c...
+main2.c(8): error:  #5: cannot open source input file "data.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(79): error:  #70: incomplete type is not allowed
+compiling main2.c...
+main2.c(8): error:  #5: cannot open source input file "data.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+compiling main2.c...
+main2.c(8): error:  #5: cannot open source input file "data.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+main2.c(29): error:  #167: argument of type "const char *" is incompatible with parameter of type "uint8_t *"
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+linking...
+KEY.axf: Error: L6200E: Symbol InputMessage_192 multiply defined (by main2.o and user_ecc.o).
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+linking...
+Program Size: Code=8544 RO-data=268 RW-data=56 ZI-data=1696  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\ecc_cfg.h(96): warning:  #1295-D: Deprecated declaration ECCSign - give arg types
+..\ECC\user_ecc.c(45): error:  #20: identifier "str" is undefined
+..\ECC\user_ecc.c(46): error:  #20: identifier "len" is undefined
+compiling main2.c...
+..\ECC\ecc_cfg.h(96): warning:  #1295-D: Deprecated declaration ECCSign - give arg types
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(45): error:  #20: identifier "str" is undefined
+..\ECC\user_ecc.c(46): error:  #20: identifier "len" is undefined
+compiling main2.c...
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(45): error:  #513: a value of type "const char *" cannot be assigned to an entity of type "uint8_t *"
+..\ECC\user_ecc.c(46): error:  #20: identifier "len" is undefined
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(46): error:  #20: identifier "len" is undefined
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+linking...
+Program Size: Code=8544 RO-data=268 RW-data=56 ZI-data=1696  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main2.c...
+linking...
+Program Size: Code=28162 RO-data=6590 RW-data=68 ZI-data=6484  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Load "K:\\嵌入式\\F1_206\\USER\\KEY.AXF" 
+Set JLink Project File to "K:\嵌入式\F1_206\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+linking...
+Program Size: Code=28162 RO-data=6590 RW-data=68 ZI-data=6484  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Load "K:\\嵌入式\\F1_206\\USER\\KEY.AXF" 
+Set JLink Project File to "K:\嵌入式\F1_206\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main2.c...
+linking...
+Program Size: Code=28154 RO-data=6590 RW-data=68 ZI-data=6484  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Load "K:\\嵌入式\\F1_206\\USER\\KEY.AXF" 
+Set JLink Project File to "K:\嵌入式\F1_206\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main2.c...
+linking...
+Program Size: Code=28118 RO-data=6590 RW-data=68 ZI-data=6484  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Load "K:\\嵌入式\\F1_206\\USER\\KEY.AXF" 
+Set JLink Project File to "K:\嵌入式\F1_206\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+linking...
+Program Size: Code=28118 RO-data=6590 RW-data=68 ZI-data=6484  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=28118 RO-data=6590 RW-data=68 ZI-data=6484  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Load "K:\\嵌入式\\F1_206\\USER\\KEY.AXF" 
+Set JLink Project File to "K:\嵌入式\F1_206\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling user_ecc.c...
+linking...
+Program Size: Code=28174 RO-data=6590 RW-data=68 ZI-data=6484  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Load "K:\\嵌入式\\F1_206\\USER\\KEY.AXF" 
+Set JLink Project File to "K:\嵌入式\F1_206\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling user_ecc.c...
+..\ECC\user_ecc.c(96): error:  #20: identifier "InputMessage_192" is undefined
+compiling main2.c...
+Target not created
+Build target 'Target 1'
+compiling user_ecc.c...
+linking...
+Program Size: Code=28182 RO-data=6590 RW-data=68 ZI-data=6548  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=28182 RO-data=6590 RW-data=68 ZI-data=6548  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=28182 RO-data=6590 RW-data=68 ZI-data=6548  
+FromELF: creating hex file...
+"KEY.axf" - 0 Error(s), 0 Warning(s).
+Load "K:\\嵌入式\\F1_206\\USER\\KEY.AXF" 
+Set JLink Project File to "K:\嵌入式\F1_206\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.

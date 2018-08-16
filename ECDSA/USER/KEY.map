@@ -1,0 +1,1840 @@
+ARM Linker, 5.02 [Build 28] [MDK-ARM Standard]
+
+==============================================================================
+
+Section Cross References
+
+    system_stm32f10x.o(.text) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    user_ecc.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    user_ecc.o(.text) refers to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
+    user_ecc.o(.text) refers to _printf_hex_int.o(.text) for _printf_longlong_hex
+    user_ecc.o(.text) refers to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
+    user_ecc.o(.text) refers to _printf_dec.o(.text) for _printf_int_dec
+    user_ecc.o(.text) refers to noretval__2printf.o(.text) for __2printf
+    user_ecc.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    user_ecc.o(.text) refers to crypto.o(i.RNGinit) for RNGinit
+    user_ecc.o(.text) refers to crypto.o(i.SHA256_Init) for SHA256_Init
+    user_ecc.o(.text) refers to crypto.o(i.SHA256_Append) for SHA256_Append
+    user_ecc.o(.text) refers to crypto.o(i.SHA256_Finish) for SHA256_Finish
+    user_ecc.o(.text) refers to crypto.o(i.ECCinitEC) for ECCinitEC
+    user_ecc.o(.text) refers to crypto.o(i.ECCinitPoint) for ECCinitPoint
+    user_ecc.o(.text) refers to crypto.o(i.ECCsetPointCoordinate) for ECCsetPointCoordinate
+    user_ecc.o(.text) refers to crypto.o(i.ECCvalidatePubKey) for ECCvalidatePubKey
+    user_ecc.o(.text) refers to crypto.o(i.ECDSAinitSign) for ECDSAinitSign
+    user_ecc.o(.text) refers to crypto.o(i.ECDSAsetSignature) for ECDSAsetSignature
+    user_ecc.o(.text) refers to crypto.o(i.ECDSAverify) for ECDSAverify
+    user_ecc.o(.text) refers to crypto.o(i.ECDSAfreeSign) for ECDSAfreeSign
+    user_ecc.o(.text) refers to crypto.o(i.ECCfreePoint) for ECCfreePoint
+    user_ecc.o(.text) refers to crypto.o(i.ECCfreeEC) for ECCfreeEC
+    user_ecc.o(.text) refers to crypto.o(i.ECCinitPrivKey) for ECCinitPrivKey
+    user_ecc.o(.text) refers to crypto.o(i.ECCkeyGen) for ECCkeyGen
+    user_ecc.o(.text) refers to crypto.o(i.ECDSAsign) for ECDSAsign
+    user_ecc.o(.text) refers to user_ecc.o(.constdata) for P_192_a
+    user_ecc.o(.text) refers to user_ecc.o(.bss) for MessDigest_t1
+    user_ecc.o(.text) refers to crypto.o(i.ECCgetPointCoordinate) for ECCgetPointCoordinate
+    user_ecc.o(.text) refers to crypto.o(i.ECCgetPrivKeyValue) for ECCgetPrivKeyValue
+    user_ecc.o(.text) refers to crypto.o(i.ECDSAgetSignature) for ECDSAgetSignature
+    user_ecc.o(.text) refers to crypto.o(i.ECCfreePrivKey) for ECCfreePrivKey
+    user_ecc.o(.text) refers to crypto.o(i.RNGfree) for RNGfree
+    main2.o(.text) refers to crypto.o(i.Crypto_DeInit) for Crypto_DeInit
+    main2.o(.text) refers to user_ecc.o(.text) for EC_paraTestInit
+    main2.o(.text) refers to system_stm32f10x.o(.text) for SystemInit
+    main2.o(.text) refers to delay.o(.text) for delay_init
+    main2.o(.text) refers to led.o(.text) for LED_Init
+    main2.o(.text) refers to main2.o(.data) for InputMessage_192
+    main2.o(.text) refers to main2.o(.bss) for result1
+    led.o(.text) refers to stm32f10x_rcc.o(.text) for RCC_APB2PeriphClockCmd
+    led.o(.text) refers to stm32f10x_gpio.o(.text) for GPIO_Init
+    key.o(.text) refers to stm32f10x_rcc.o(.text) for RCC_APB2PeriphClockCmd
+    key.o(.text) refers to stm32f10x_gpio.o(.text) for GPIO_Init
+    key.o(.text) refers to delay.o(.text) for delay_ms
+    key.o(.text) refers to key.o(.data) for key_up
+    timer.o(.text) refers to stm32f10x_rcc.o(.text) for RCC_APB1PeriphClockCmd
+    timer.o(.text) refers to stm32f10x_tim.o(.text) for TIM_TimeBaseInit
+    timer.o(.text) refers to misc.o(.text) for NVIC_Init
+    timer.o(.text) refers to timer.o(.data) for timecount
+    delay.o(.text) refers to misc.o(.text) for SysTick_CLKSourceConfig
+    delay.o(.text) refers to delay.o(.data) for fac_us
+    sys.o(.text) refers to misc.o(.text) for NVIC_PriorityGroupConfig
+    usart.o(.text) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    usart.o(.text) refers to stm32f10x_rcc.o(.text) for RCC_APB2PeriphClockCmd
+    usart.o(.text) refers to stm32f10x_gpio.o(.text) for GPIO_Init
+    usart.o(.text) refers to misc.o(.text) for NVIC_Init
+    usart.o(.text) refers to stm32f10x_usart.o(.text) for USART_Init
+    usart.o(.text) refers to usart.o(.data) for USART_RX_STA
+    usart.o(.text) refers to usart.o(.bss) for USART_RX_BUF
+    usart.o(.bss) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    usart.o(.data) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    startup_stm32f10x_md.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(.text) for NMI_Handler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(.text) for TIM3_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to usart.o(.text) for USART1_IRQHandler
+    startup_stm32f10x_md.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(.text) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(HEAP) for Heap_Mem
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(STACK) for Stack_Mem
+    stm32f10x_gpio.o(.text) refers to stm32f10x_rcc.o(.text) for RCC_APB2PeriphResetCmd
+    stm32f10x_rcc.o(.text) refers to stm32f10x_rcc.o(.data) for APBAHBPrescTable
+    stm32f10x_tim.o(.text) refers to stm32f10x_rcc.o(.text) for RCC_APB2PeriphResetCmd
+    stm32f10x_usart.o(.text) refers to stm32f10x_rcc.o(.text) for RCC_APB2PeriphResetCmd
+    crypto.o(i.AES128_decrypt) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES128_encrypt) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES128_keyschedule_dec) refers to crypto.o(i.AES128_keyschedule_enc) for AES128_keyschedule_enc
+    crypto.o(i.AES128_keyschedule_dec) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES128_keyschedule_enc) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES192_decrypt) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES192_encrypt) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES192_keyschedule_dec) refers to crypto.o(i.AES192_keyschedule_enc) for AES192_keyschedule_enc
+    crypto.o(i.AES192_keyschedule_dec) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES192_keyschedule_enc) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES256_decrypt) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES256_encrypt) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES256_keyschedule_dec) refers to crypto.o(i.AES256_keyschedule_enc) for AES256_keyschedule_enc
+    crypto.o(i.AES256_keyschedule_dec) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES256_keyschedule_enc) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES_CBC_Decrypt_Append) refers to crypto.o(i.AES128_decrypt) for AES128_decrypt
+    crypto.o(i.AES_CBC_Decrypt_Append) refers to crypto.o(i.AES192_decrypt) for AES192_decrypt
+    crypto.o(i.AES_CBC_Decrypt_Append) refers to crypto.o(i.AES256_decrypt) for AES256_decrypt
+    crypto.o(i.AES_CBC_Decrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_CBC_Encrypt_Append) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CBC_Encrypt_Append) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CBC_Encrypt_Append) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CBC_Encrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_CCM_Decrypt_Append) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CCM_Decrypt_Append) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CCM_Decrypt_Append) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CCM_Decrypt_Finish) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CCM_Decrypt_Finish) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CCM_Decrypt_Finish) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CCM_Decrypt_Init) refers to crypto.o(i.AES_CCM_Encrypt_Init) for AES_CCM_Encrypt_Init
+    crypto.o(i.AES_CCM_Encrypt_Append) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CCM_Encrypt_Append) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CCM_Encrypt_Append) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CCM_Encrypt_Finish) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CCM_Encrypt_Finish) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CCM_Encrypt_Finish) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CCM_Encrypt_Init) refers to crypto.o(i.AES128_keyschedule_enc) for AES128_keyschedule_enc
+    crypto.o(i.AES_CCM_Encrypt_Init) refers to crypto.o(i.AES192_keyschedule_enc) for AES192_keyschedule_enc
+    crypto.o(i.AES_CCM_Encrypt_Init) refers to crypto.o(i.AES256_keyschedule_enc) for AES256_keyschedule_enc
+    crypto.o(i.AES_CCM_Encrypt_Init) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CCM_Encrypt_Init) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CCM_Encrypt_Init) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CCM_Header_Append) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CCM_Header_Append) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CCM_Header_Append) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CMAC_Decrypt_Append) refers to crypto.o(i.AES_CMAC_Encrypt_Append) for AES_CMAC_Encrypt_Append
+    crypto.o(i.AES_CMAC_Decrypt_Finish) refers to crypto.o(i.AES_CMAC_Encrypt_Append) for AES_CMAC_Encrypt_Append
+    crypto.o(i.AES_CMAC_Decrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_CMAC_Encrypt_Append) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CMAC_Encrypt_Append) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CMAC_Encrypt_Append) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CMAC_Encrypt_Finish) refers to crypto.o(i.AES_CMAC_Encrypt_Append) for AES_CMAC_Encrypt_Append
+    crypto.o(i.AES_CMAC_Encrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_CTR_Decrypt_Append) refers to crypto.o(i.AES_CTR_Encrypt_Append) for AES_CTR_Encrypt_Append
+    crypto.o(i.AES_CTR_Decrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_CTR_Encrypt_Append) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_CTR_Encrypt_Append) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_CTR_Encrypt_Append) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_CTR_Encrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_ECB_Decrypt_Append) refers to crypto.o(i.AES128_decrypt) for AES128_decrypt
+    crypto.o(i.AES_ECB_Decrypt_Append) refers to crypto.o(i.AES192_decrypt) for AES192_decrypt
+    crypto.o(i.AES_ECB_Decrypt_Append) refers to crypto.o(i.AES256_decrypt) for AES256_decrypt
+    crypto.o(i.AES_ECB_Decrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_ECB_Encrypt_Append) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_ECB_Encrypt_Append) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_ECB_Encrypt_Append) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_ECB_Encrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_GCM_Decrypt_Append) refers to crypto.o(i.AESgcmAppend) for AESgcmAppend
+    crypto.o(i.AES_GCM_Decrypt_Finish) refers to crypto.o(i.AESgcmFinal) for AESgcmFinal
+    crypto.o(i.AES_GCM_Decrypt_Init) refers to crypto.o(i.AES_GCM_Encrypt_Init) for AES_GCM_Encrypt_Init
+    crypto.o(i.AES_GCM_Encrypt_Append) refers to crypto.o(i.AESgcmAppend) for AESgcmAppend
+    crypto.o(i.AES_GCM_Encrypt_Finish) refers to crypto.o(i.AESgcmFinal) for AESgcmFinal
+    crypto.o(i.AES_GCM_Encrypt_Init) refers to crypto.o(i.AES128_keyschedule_enc) for AES128_keyschedule_enc
+    crypto.o(i.AES_GCM_Encrypt_Init) refers to crypto.o(i.AES192_keyschedule_enc) for AES192_keyschedule_enc
+    crypto.o(i.AES_GCM_Encrypt_Init) refers to crypto.o(i.AES256_keyschedule_enc) for AES256_keyschedule_enc
+    crypto.o(i.AES_GCM_Encrypt_Init) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_GCM_Encrypt_Init) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_GCM_Encrypt_Init) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_GCM_Encrypt_Init) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.AES_GCM_Header_Append) refers to crypto.o(i.gfmul) for gfmul
+    crypto.o(i.AES_KeyWrap_Decrypt_Append) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    crypto.o(i.AES_KeyWrap_Decrypt_Append) refers to crypto.o(i.AES128_decrypt) for AES128_decrypt
+    crypto.o(i.AES_KeyWrap_Decrypt_Append) refers to crypto.o(i.AES192_decrypt) for AES192_decrypt
+    crypto.o(i.AES_KeyWrap_Decrypt_Append) refers to crypto.o(i.AES256_decrypt) for AES256_decrypt
+    crypto.o(i.AES_KeyWrap_Decrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AES_KeyWrap_Encrypt_Append) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    crypto.o(i.AES_KeyWrap_Encrypt_Append) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AES_KeyWrap_Encrypt_Append) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AES_KeyWrap_Encrypt_Append) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AES_KeyWrap_Encrypt_Init) refers to crypto.o(i.AESstdInit) for AESstdInit
+    crypto.o(i.AESgcmAppend) refers to crypto.o(i.gfmul) for gfmul
+    crypto.o(i.AESgcmAppend) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AESgcmAppend) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AESgcmAppend) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AESgcmFinal) refers to crypto.o(i.gfmul) for gfmul
+    crypto.o(i.AESgcmFinal) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.AESgcmFinal) refers to crypto.o(i.AES192_encrypt) for AES192_encrypt
+    crypto.o(i.AESgcmFinal) refers to crypto.o(i.AES256_encrypt) for AES256_encrypt
+    crypto.o(i.AESstdInit) refers to crypto.o(i.AES128_keyschedule_enc) for AES128_keyschedule_enc
+    crypto.o(i.AESstdInit) refers to crypto.o(i.AES192_keyschedule_enc) for AES192_keyschedule_enc
+    crypto.o(i.AESstdInit) refers to crypto.o(i.AES256_keyschedule_enc) for AES256_keyschedule_enc
+    crypto.o(i.AESstdInit) refers to crypto.o(i.AES256_keyschedule_dec) for AES256_keyschedule_dec
+    crypto.o(i.AESstdInit) refers to crypto.o(i.AES128_keyschedule_dec) for AES128_keyschedule_dec
+    crypto.o(i.AESstdInit) refers to crypto.o(i.AES192_keyschedule_dec) for AES192_keyschedule_dec
+    crypto.o(i.ARC4_Decrypt_Append) refers to crypto.o(i.ARC4_Encrypt_Append) for ARC4_Encrypt_Append
+    crypto.o(i.AddBig) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.AddBig) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.AddBig) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.AddBig) refers to crypto.o(i.Sub_Moduli_Big) for Sub_Moduli_Big
+    crypto.o(i.AddBig) refers to crypto.o(i.Add_Moduli_Big) for Add_Moduli_Big
+    crypto.o(i.AddBig) refers to crypto.o(i.SetZeroBig) for SetZeroBig
+    crypto.o(i.AddBig) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.Add_Moduli_Big) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.Big_to_fixedW8) refers to crypto.o(i.Big_to_W8) for Big_to_W8
+    crypto.o(i.Crypto_DeInit) refers to stm32f10x_rcc.o(.text) for RCC_AHBPeriphClockCmd
+    crypto.o(i.DES_CBC_Decrypt_Append) refers to crypto.o(i.desfunc) for desfunc
+    crypto.o(i.DES_CBC_Decrypt_Init) refers to crypto.o(i.DESstdInit) for DESstdInit
+    crypto.o(i.DES_CBC_Encrypt_Append) refers to crypto.o(i.desfunc) for desfunc
+    crypto.o(i.DES_CBC_Encrypt_Init) refers to crypto.o(i.DESstdInit) for DESstdInit
+    crypto.o(i.DES_ECB_Decrypt_Append) refers to crypto.o(i.desfunc) for desfunc
+    crypto.o(i.DES_ECB_Decrypt_Init) refers to crypto.o(i.DESstdInit) for DESstdInit
+    crypto.o(i.DES_ECB_Encrypt_Append) refers to crypto.o(i.desfunc) for desfunc
+    crypto.o(i.DES_ECB_Encrypt_Init) refers to crypto.o(i.DESstdInit) for DESstdInit
+    crypto.o(i.DESstdInit) refers to crypto.o(i.deskey) for deskey
+    crypto.o(i.DRBG_AES128_Block_cipher_df) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    crypto.o(i.DRBG_AES128_Block_cipher_df) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.DRBG_AES128_Block_cipher_df) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.DRBG_AES128_Block_cipher_df) refers to crypto.o(i.AES128_keyschedule_enc) for AES128_keyschedule_enc
+    crypto.o(i.DRBG_AES128_Block_cipher_df) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.DRBG_AES128_Update) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.ECCcopyPoint) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.ECCfreeEC) refers to crypto.o(i.StFreeBig) for StFreeBig
+    crypto.o(i.ECCfreePoint) refers to crypto.o(i.StFreeBig) for StFreeBig
+    crypto.o(i.ECCfreePrivKey) refers to crypto.o(i.StFreeBig) for StFreeBig
+    crypto.o(i.ECCgetPointCoordinate) refers to crypto.o(i.Big_to_fixedW8) for Big_to_fixedW8
+    crypto.o(i.ECCgetPrivKeyValue) refers to crypto.o(i.Big_to_fixedW8) for Big_to_fixedW8
+    crypto.o(i.ECCinitEC) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ECCinitEC) refers to crypto.o(i.W8_to_Big) for W8_to_Big
+    crypto.o(i.ECCinitEC) refers to crypto.o(i.StFreeBig) for StFreeBig
+    crypto.o(i.ECCinitPoint) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ECCinitPoint) refers to crypto.o(i.StFreeBig) for StFreeBig
+    crypto.o(i.ECCinitPoint) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.ECCinitPrivKey) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ECCinitPrivKey) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.ECCkeyGen) refers to crypto.o(i.GenRndBNmodN) for GenRndBNmodN
+    crypto.o(i.ECCkeyGen) refers to crypto.o(i.ECCinitPoint) for ECCinitPoint
+    crypto.o(i.ECCkeyGen) refers to crypto.o(i.ECCsetPointGenerator) for ECCsetPointGenerator
+    crypto.o(i.ECCkeyGen) refers to crypto.o(i.ECCscalarMul) for ECCscalarMul
+    crypto.o(i.ECCkeyGen) refers to crypto.o(i.ECCfreePoint) for ECCfreePoint
+    crypto.o(i.ECCpoint2Monty) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.ECCpointFromMonty) refers to crypto.o(i.MontyExit) for MontyExit
+    crypto.o(i.ECCscalarMul) refers to crypto.o(i.MontyInit) for MontyInit
+    crypto.o(i.ECCscalarMul) refers to crypto.o(i.NAF_Binary_PointMul) for NAF_Binary_PointMul
+    crypto.o(i.ECCscalarMul) refers to crypto.o(i.MontyKillAll) for MontyKillAll
+    crypto.o(i.ECCscalarMul) refers to crypto.o(i.Normalize) for Normalize
+    crypto.o(i.ECCsetPointCoordinate) refers to crypto.o(i.W8_to_Big) for W8_to_Big
+    crypto.o(i.ECCsetPointGenerator) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.ECCsetPointGenerator) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.ECCsetPrivKeyValue) refers to crypto.o(i.W8_to_Big) for W8_to_Big
+    crypto.o(i.ECCsymmetricPoint) refers to crypto.o(i.ECCcopyPoint) for ECCcopyPoint
+    crypto.o(i.ECCsymmetricPoint) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.ECCinitPoint) for ECCinitPoint
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.ECCcopyPoint) for ECCcopyPoint
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.MontyInit) for MontyInit
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.ModularAddBig) for ModularAddBig
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.MontyKillAll) for MontyKillAll
+    crypto.o(i.ECCvalidatePubKey) refers to crypto.o(i.ECCfreePoint) for ECCfreePoint
+    crypto.o(i.ECDSAfreeSign) refers to crypto.o(i.StFreeBig) for StFreeBig
+    crypto.o(i.ECDSAgetSignature) refers to crypto.o(i.Big_to_fixedW8) for Big_to_fixedW8
+    crypto.o(i.ECDSAinitSign) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ECDSAinitSign) refers to crypto.o(i.StFreeBig) for StFreeBig
+    crypto.o(i.ECDSAsetSignature) refers to crypto.o(i.W8_to_Big) for W8_to_Big
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.ECCinitPoint) for ECCinitPoint
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.ECCsetPointGenerator) for ECCsetPointGenerator
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.MontyInit) for MontyInit
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.GenRndBNmodN) for GenRndBNmodN
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.NAF_Binary_PointMul) for NAF_Binary_PointMul
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.Normalize) for Normalize
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.AddBig) for AddBig
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.MontyKillAll) for MontyKillAll
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.ECCfreePoint) for ECCfreePoint
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.ModularInvBig) for ModularInvBig
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.W8_to_Big) for W8_to_Big
+    crypto.o(i.ECDSAsign) refers to crypto.o(i.MontyExit) for MontyExit
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.CountBits) for CountBits
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.W8_to_Big) for W8_to_Big
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.RightShift) for RightShift
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.ModularInvBig) for ModularInvBig
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.MontyInit) for MontyInit
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.MontyKillAll) for MontyKillAll
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.ECCinitPoint) for ECCinitPoint
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.ECCsetPointGenerator) for ECCsetPointGenerator
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.NAF_Binary_PointMul) for NAF_Binary_PointMul
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.MontyJacProjAddPoints) for MontyJacProjAddPoints
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.Normalize) for Normalize
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.ECDSAverify) refers to crypto.o(i.ECCfreePoint) for ECCfreePoint
+    crypto.o(i.FastDivInnerBase) refers to crypto.o(i.SetZeroBig) for SetZeroBig
+    crypto.o(i.GenRndBN) refers to crypto.o(i.crl_DRBG_AES128_Generate) for crl_DRBG_AES128_Generate
+    crypto.o(i.GenRndBNmodN) refers to crypto.o(i.CountBits) for CountBits
+    crypto.o(i.GenRndBNmodN) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.GenRndBNmodN) refers to crypto.o(i.crl_DRBG_AES128_Generate) for crl_DRBG_AES128_Generate
+    crypto.o(i.HMAC_MD5_Append) refers to crypto.o(i.crl_u_MD5_Update) for crl_u_MD5_Update
+    crypto.o(i.HMAC_MD5_Finish) refers to crypto.o(i.MD5_Finish) for MD5_Finish
+    crypto.o(i.HMAC_MD5_Finish) refers to crypto.o(i.crl_u_MD5_Update) for crl_u_MD5_Update
+    crypto.o(i.HMAC_MD5_Init) refers to crypto.o(i.crl_u_MD5_Update) for crl_u_MD5_Update
+    crypto.o(i.HMAC_MD5_Init) refers to crypto.o(i.MD5_Finish) for MD5_Finish
+    crypto.o(i.HMAC_SHA1_Append) refers to crypto.o(i.SHA1_Append) for SHA1_Append
+    crypto.o(i.HMAC_SHA1_Finish) refers to crypto.o(i.SHA1_Finish) for SHA1_Finish
+    crypto.o(i.HMAC_SHA1_Finish) refers to crypto.o(i.SHA1_Append) for SHA1_Append
+    crypto.o(i.HMAC_SHA1_Init) refers to crypto.o(i.SHA1_Append) for SHA1_Append
+    crypto.o(i.HMAC_SHA1_Init) refers to crypto.o(i.SHA1_Finish) for SHA1_Finish
+    crypto.o(i.HMAC_SHA224_Append) refers to crypto.o(i.SHA256Update) for SHA256Update
+    crypto.o(i.HMAC_SHA224_Finish) refers to crypto.o(i.SHA224_Finish) for SHA224_Finish
+    crypto.o(i.HMAC_SHA224_Finish) refers to crypto.o(i.SHA256Update) for SHA256Update
+    crypto.o(i.HMAC_SHA224_Init) refers to crypto.o(i.SHA256Update) for SHA256Update
+    crypto.o(i.HMAC_SHA224_Init) refers to crypto.o(i.SHA224_Finish) for SHA224_Finish
+    crypto.o(i.HMAC_SHA256_Append) refers to crypto.o(i.SHA256Update) for SHA256Update
+    crypto.o(i.HMAC_SHA256_Finish) refers to crypto.o(i.SHA256_Finish) for SHA256_Finish
+    crypto.o(i.HMAC_SHA256_Finish) refers to crypto.o(i.SHA256Update) for SHA256Update
+    crypto.o(i.HMAC_SHA256_Init) refers to crypto.o(i.SHA256Update) for SHA256Update
+    crypto.o(i.HMAC_SHA256_Init) refers to crypto.o(i.SHA256_Finish) for SHA256_Finish
+    crypto.o(i.MD5_Append) refers to crypto.o(i.crl_u_MD5_Update) for crl_u_MD5_Update
+    crypto.o(i.MD5_Finish) refers to crypto.o(i.crl_u_MD5_Finish) for crl_u_MD5_Finish
+    crypto.o(i.ModularAddBig) refers to crypto.o(i.AddBig) for AddBig
+    crypto.o(i.ModularAddBig) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.ModularAddBig) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.ModularExpSlidWin) refers to crypto.o(i.MontyInit) for MontyInit
+    crypto.o(i.ModularExpSlidWin) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.ModularExpSlidWin) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ModularExpSlidWin) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.ModularExpSlidWin) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.ModularExpSlidWin) refers to crypto.o(i.MontyExit) for MontyExit
+    crypto.o(i.ModularExpSlidWin) refers to crypto.o(i.MontyKillAll) for MontyKillAll
+    crypto.o(i.ModularExpSlidWin) refers to crypto.o(i.StFreeBig) for StFreeBig
+    crypto.o(i.ModularFastMul2) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.ModularFastMul2) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.ModularInvBig) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.ModularInvBig) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.ModularInvBig) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.ModularInvBig) refers to crypto.o(i.FastDiv2) for FastDiv2
+    crypto.o(i.ModularInvBig) refers to crypto.o(i.AddBig) for AddBig
+    crypto.o(i.ModularInvBig) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.ModularInvBig) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.ModularSubBig) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.ModularSubBig) refers to crypto.o(i.AddBig) for AddBig
+    crypto.o(i.MontyExit) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.MontyExit) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.MontyExit) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.MontyInit) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.MontyInit) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.MontyInit) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.MontyInit) refers to crypto.o(i.CountBits) for CountBits
+    crypto.o(i.MontyInit) refers to crypto.o(i.LeftShift) for LeftShift
+    crypto.o(i.MontyInit) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.MontyInit) refers to crypto.o(i.SetZeroBig) for SetZeroBig
+    crypto.o(i.MontyInit) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.MontyJacProjAddPoints) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.MontyJacProjAddPoints) refers to crypto.o(i.ECCcopyPoint) for ECCcopyPoint
+    crypto.o(i.MontyJacProjAddPoints) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.MontyJacProjAddPoints) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.MontyJacProjAddPoints) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.MontyJacProjAddPoints) refers to crypto.o(i.AddBig) for AddBig
+    crypto.o(i.MontyJacProjAddPoints) refers to crypto.o(i.MontyJacProjDoublePoint) for MontyJacProjDoublePoint
+    crypto.o(i.MontyJacProjAddPoints) refers to crypto.o(i.ModularFastMul2) for ModularFastMul2
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.ModularFastMul2) for ModularFastMul2
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.AddBig) for AddBig
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.ModularAddBig) for ModularAddBig
+    crypto.o(i.MontyJacProjDoublePoint) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.MontyMul) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.MontyMul) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.MontyMul) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.MontyMul) refers to crypto.o(i.Sub_Moduli_Big) for Sub_Moduli_Big
+    crypto.o(i.MontyMul) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.MulBigbyUnInt) refers to crypto.o(i.SetZeroBig) for SetZeroBig
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.ECCinitPoint) for ECCinitPoint
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.ECCcopyPoint) for ECCcopyPoint
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.SubBig) for SubBig
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.MontyJacProjDoublePoint) for MontyJacProjDoublePoint
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.MontyJacProjAddPoints) for MontyJacProjAddPoints
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(i.ECCfreePoint) for ECCfreePoint
+    crypto.o(i.NAF_Binary_PointMul) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.Normalize) refers to crypto.o(i.ECCcopyPoint) for ECCcopyPoint
+    crypto.o(i.Normalize) refers to crypto.o(i.MontyExit) for MontyExit
+    crypto.o(i.Normalize) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.Normalize) refers to crypto.o(i.MontyMul) for MontyMul
+    crypto.o(i.Normalize) refers to crypto.o(i.ModularInvBig) for ModularInvBig
+    crypto.o(i.Normalize) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.RNGgenBytes) refers to crypto.o(i.crl_DRBG_AES128_Generate) for crl_DRBG_AES128_Generate
+    crypto.o(i.RNGgenWords) refers to crypto.o(i.crl_DRBG_AES128_Generate) for crl_DRBG_AES128_Generate
+    crypto.o(i.RNGinit) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    crypto.o(i.RNGinit) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    crypto.o(i.RNGinit) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.RNGinit) refers to crypto.o(i.DRBG_AES128_Block_cipher_df) for DRBG_AES128_Block_cipher_df
+    crypto.o(i.RNGinit) refers to crypto.o(i.DRBG_AES128_Update) for DRBG_AES128_Update
+    crypto.o(i.RNGinit) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.RNGreseed) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.RNGreseed) refers to crypto.o(i.DRBG_AES128_Block_cipher_df) for DRBG_AES128_Block_cipher_df
+    crypto.o(i.RNGreseed) refers to crypto.o(i.AES128_keyschedule_enc) for AES128_keyschedule_enc
+    crypto.o(i.RNGreseed) refers to crypto.o(i.DRBG_AES128_Update) for DRBG_AES128_Update
+    crypto.o(i.RSASP1) refers to crypto.o(i.crl_ModularExp) for crl_ModularExp
+    crypto.o(i.RSAVP1) refers to crypto.o(i.crl_ModularExp) for crl_ModularExp
+    crypto.o(i.RSA_PKCS1v15_Sign) refers to crypto.o(i.crl_ModularExp) for crl_ModularExp
+    crypto.o(i.RSA_PKCS1v15_Verify) refers to crypto.o(i.crl_ModularExp) for crl_ModularExp
+    crypto.o(i.SHA1Final) refers to crypto.o(i.SHA1Transform) for SHA1Transform
+    crypto.o(i.SHA1Update) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.SHA1Update) refers to crypto.o(i.SHA1Transform) for SHA1Transform
+    crypto.o(i.SHA1_Append) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.SHA1_Append) refers to crypto.o(i.SHA1Transform) for SHA1Transform
+    crypto.o(i.SHA1_Finish) refers to crypto.o(i.SHA1Final) for SHA1Final
+    crypto.o(i.SHA224Final) refers to crypto.o(i.SHA256Transform) for SHA256Transform
+    crypto.o(i.SHA224_Append) refers to crypto.o(i.SHA256Update) for SHA256Update
+    crypto.o(i.SHA224_Finish) refers to crypto.o(i.SHA224Final) for SHA224Final
+    crypto.o(i.SHA256Final) refers to crypto.o(i.SHA256Transform) for SHA256Transform
+    crypto.o(i.SHA256Transform) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.SHA256Update) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.SHA256Update) refers to crypto.o(i.SHA256Transform) for SHA256Transform
+    crypto.o(i.SHA256_Append) refers to crypto.o(i.SHA256Update) for SHA256Update
+    crypto.o(i.SHA256_Finish) refers to crypto.o(i.SHA256Final) for SHA256Final
+    crypto.o(i.SubBig) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.SubBig) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.SubBig) refers to crypto.o(i.Add_Moduli_Big) for Add_Moduli_Big
+    crypto.o(i.SubBig) refers to crypto.o(i.Sub_Moduli_Big) for Sub_Moduli_Big
+    crypto.o(i.SubBig) refers to crypto.o(i.SetZeroBig) for SetZeroBig
+    crypto.o(i.SubBig) refers to crypto.o(i.InitBig) for InitBig
+    crypto.o(i.SubBig) refers to crypto.o(i.CopyBig) for CopyBig
+    crypto.o(i.TDES_CBC_Decrypt_Append) refers to crypto.o(i.desfunc) for desfunc
+    crypto.o(i.TDES_CBC_Decrypt_Init) refers to crypto.o(i.TDESstdInit) for TDESstdInit
+    crypto.o(i.TDES_CBC_Encrypt_Append) refers to crypto.o(i.desfunc) for desfunc
+    crypto.o(i.TDES_CBC_Encrypt_Init) refers to crypto.o(i.TDESstdInit) for TDESstdInit
+    crypto.o(i.TDES_ECB_Decrypt_Append) refers to crypto.o(i.desfunc) for desfunc
+    crypto.o(i.TDES_ECB_Decrypt_Init) refers to crypto.o(i.TDESstdInit) for TDESstdInit
+    crypto.o(i.TDES_ECB_Encrypt_Append) refers to crypto.o(i.desfunc) for desfunc
+    crypto.o(i.TDES_ECB_Encrypt_Init) refers to crypto.o(i.TDESstdInit) for TDESstdInit
+    crypto.o(i.TDESstdInit) refers to crypto.o(i.deskey) for deskey
+    crypto.o(i.W8_to_Big) refers to crypto.o(i.SetZeroBig) for SetZeroBig
+    crypto.o(i.crl_DRBG_AES128_Generate) refers to crypto.o(i.DRBG_AES128_Block_cipher_df) for DRBG_AES128_Block_cipher_df
+    crypto.o(i.crl_DRBG_AES128_Generate) refers to crypto.o(i.AES128_keyschedule_enc) for AES128_keyschedule_enc
+    crypto.o(i.crl_DRBG_AES128_Generate) refers to crypto.o(i.DRBG_AES128_Update) for DRBG_AES128_Update
+    crypto.o(i.crl_DRBG_AES128_Generate) refers to crypto.o(i.AES128_encrypt) for AES128_encrypt
+    crypto.o(i.crl_DRBG_AES128_Instantiate) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    crypto.o(i.crl_DRBG_AES128_Instantiate) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    crypto.o(i.crl_DRBG_AES128_Instantiate) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.crl_DRBG_AES128_Instantiate) refers to crypto.o(i.DRBG_AES128_Block_cipher_df) for DRBG_AES128_Block_cipher_df
+    crypto.o(i.crl_DRBG_AES128_Instantiate) refers to crypto.o(i.DRBG_AES128_Update) for DRBG_AES128_Update
+    crypto.o(i.crl_DRBG_AES128_Instantiate) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.crl_DRBG_AES128_Reseed) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.crl_DRBG_AES128_Reseed) refers to crypto.o(i.DRBG_AES128_Block_cipher_df) for DRBG_AES128_Block_cipher_df
+    crypto.o(i.crl_DRBG_AES128_Reseed) refers to crypto.o(i.AES128_keyschedule_enc) for AES128_keyschedule_enc
+    crypto.o(i.crl_DRBG_AES128_Reseed) refers to crypto.o(i.DRBG_AES128_Update) for DRBG_AES128_Update
+    crypto.o(i.crl_ModularExp) refers to crypto.o(i.StAllocBig) for StAllocBig
+    crypto.o(i.crl_ModularExp) refers to crypto.o(i.W8_to_Big) for W8_to_Big
+    crypto.o(i.crl_ModularExp) refers to crypto.o(i.CompareBig) for CompareBig
+    crypto.o(i.crl_ModularExp) refers to crypto.o(i.ModularExpSlidWin) for ModularExpSlidWin
+    crypto.o(i.crl_ModularExp) refers to crypto.o(i.Big_to_W8) for Big_to_W8
+    crypto.o(i.crl_u_MD5_Finish) refers to crypto.o(i.crl_u_MD5_Update) for crl_u_MD5_Update
+    crypto.o(i.crl_u_MD5_Finish) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.crl_u_MD5_Update) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    crypto.o(i.crl_u_MD5_Update) refers to crypto.o(i.md5_process) for md5_process
+    crypto.o(i.desfunc) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.deskey) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    crypto.o(i.deskey) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.gfmul) refers to crypto.o(.constdata) for .constdata
+    crypto.o(i.md5_process) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    use_no_semi_2.o(.text) refers (Special) to use_no_semi.o(.text) for __use_no_semihosting_swi
+    __2printf.o(.text) refers to _printf_char_file.o(.text) for _printf_char_file
+    __2printf.o(.text) refers to usart.o(.data) for __stdout
+    noretval__2printf.o(.text) refers to _printf_char_file.o(.text) for _printf_char_file
+    noretval__2printf.o(.text) refers to usart.o(.data) for __stdout
+    __printf.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    _printf_dec.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_ll.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_ll.o(.text) refers to _printf_hex_ll.o(.constdata) for .constdata
+    _printf_hex_int.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_int.o(.text) refers to _printf_hex_int.o(.constdata) for .constdata
+    _printf_hex_int_ll.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_int_ll.o(.text) refers to _printf_hex_int_ll.o(.constdata) for .constdata
+    _printf_hex_ptr.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_ptr.o(.text) refers to _printf_hex_ptr.o(.constdata) for .constdata
+    _printf_hex_int_ptr.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_int_ptr.o(.text) refers to _printf_hex_int_ptr.o(.constdata) for .constdata
+    _printf_hex_ll_ptr.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_ll_ptr.o(.text) refers to _printf_hex_ll_ptr.o(.constdata) for .constdata
+    _printf_hex_int_ll_ptr.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_int_ll_ptr.o(.text) refers to _printf_hex_int_ll_ptr.o(.constdata) for .constdata
+    __printf_flags.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags.o(.text) refers to __printf_flags.o(.constdata) for .constdata
+    __printf_ss.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss.o(.text) refers to __printf_flags_ss.o(.constdata) for .constdata
+    __printf_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_flags_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_wp.o(.text) refers to __printf_flags_wp.o(.constdata) for .constdata
+    __printf_ss_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_ss_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_flags_ss_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss_wp.o(.text) refers to __printf_flags_ss_wp.o(.constdata) for .constdata
+    _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) refers (Weak) to _printf_hex_int.o(.text) for _printf_int_hex
+    _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
+    _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) refers (Special) to _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017) for _printf_percent_end
+    rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    __main.o(!!!main) refers to rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    _printf_char_file.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    _printf_char_file.o(.text) refers to ferror.o(.text) for ferror
+    _printf_char_file.o(.text) refers to usart.o(.text) for fputc
+    rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main2.o(.text) for main
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    rtentry4.o(.ARM.exidx) refers to rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    _printf_char_common.o(.text) refers to __printf.o(.text) for __printf
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32f10x_md.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002A) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000008) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000F) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000031) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$0000000E) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000024) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000025) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to usart.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000006) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000009) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000003) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to usart.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to usart.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing key.o(.text), (228 bytes).
+    Removing key.o(.data), (1 bytes).
+    Removing sys.o(.text), (12 bytes).
+    Removing core_cm3.o(.emb_text), (32 bytes).
+    Removing stm32f10x_crc.o(.text), (72 bytes).
+    Removing stm32f10x_dma.o(.text), (592 bytes).
+    Removing crypto.o(.rev16_text), (4 bytes).
+    Removing crypto.o(.revsh_text), (4 bytes).
+    Removing crypto.o(i.AES128_decrypt), (788 bytes).
+    Removing crypto.o(i.AES128_keyschedule_dec), (304 bytes).
+    Removing crypto.o(i.AES192_decrypt), (784 bytes).
+    Removing crypto.o(i.AES192_encrypt), (784 bytes).
+    Removing crypto.o(i.AES192_keyschedule_dec), (280 bytes).
+    Removing crypto.o(i.AES192_keyschedule_enc), (152 bytes).
+    Removing crypto.o(i.AES256_decrypt), (788 bytes).
+    Removing crypto.o(i.AES256_encrypt), (768 bytes).
+    Removing crypto.o(i.AES256_keyschedule_dec), (280 bytes).
+    Removing crypto.o(i.AES256_keyschedule_enc), (220 bytes).
+    Removing crypto.o(i.AES_CBC_Decrypt_Append), (658 bytes).
+    Removing crypto.o(i.AES_CBC_Decrypt_Finish), (26 bytes).
+    Removing crypto.o(i.AES_CBC_Decrypt_Init), (6 bytes).
+    Removing crypto.o(i.AES_CBC_Encrypt_Append), (514 bytes).
+    Removing crypto.o(i.AES_CBC_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.AES_CBC_Encrypt_Init), (6 bytes).
+    Removing crypto.o(i.AES_CCM_Decrypt_Append), (600 bytes).
+    Removing crypto.o(i.AES_CCM_Decrypt_Finish), (392 bytes).
+    Removing crypto.o(i.AES_CCM_Decrypt_Init), (4 bytes).
+    Removing crypto.o(i.AES_CCM_Encrypt_Append), (1166 bytes).
+    Removing crypto.o(i.AES_CCM_Encrypt_Finish), (256 bytes).
+    Removing crypto.o(i.AES_CCM_Encrypt_Init), (660 bytes).
+    Removing crypto.o(i.AES_CCM_Header_Append), (560 bytes).
+    Removing crypto.o(i.AES_CMAC_Decrypt_Append), (4 bytes).
+    Removing crypto.o(i.AES_CMAC_Decrypt_Finish), (308 bytes).
+    Removing crypto.o(i.AES_CMAC_Decrypt_Init), (46 bytes).
+    Removing crypto.o(i.AES_CMAC_Encrypt_Append), (1044 bytes).
+    Removing crypto.o(i.AES_CMAC_Encrypt_Finish), (180 bytes).
+    Removing crypto.o(i.AES_CMAC_Encrypt_Init), (46 bytes).
+    Removing crypto.o(i.AES_CTR_Decrypt_Append), (16 bytes).
+    Removing crypto.o(i.AES_CTR_Decrypt_Finish), (26 bytes).
+    Removing crypto.o(i.AES_CTR_Decrypt_Init), (6 bytes).
+    Removing crypto.o(i.AES_CTR_Encrypt_Append), (700 bytes).
+    Removing crypto.o(i.AES_CTR_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.AES_CTR_Encrypt_Init), (6 bytes).
+    Removing crypto.o(i.AES_ECB_Decrypt_Append), (196 bytes).
+    Removing crypto.o(i.AES_ECB_Decrypt_Finish), (26 bytes).
+    Removing crypto.o(i.AES_ECB_Decrypt_Init), (6 bytes).
+    Removing crypto.o(i.AES_ECB_Encrypt_Append), (196 bytes).
+    Removing crypto.o(i.AES_ECB_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.AES_ECB_Encrypt_Init), (6 bytes).
+    Removing crypto.o(i.AES_GCM_Decrypt_Append), (22 bytes).
+    Removing crypto.o(i.AES_GCM_Decrypt_Finish), (8 bytes).
+    Removing crypto.o(i.AES_GCM_Decrypt_Init), (4 bytes).
+    Removing crypto.o(i.AES_GCM_Encrypt_Append), (22 bytes).
+    Removing crypto.o(i.AES_GCM_Encrypt_Finish), (6 bytes).
+    Removing crypto.o(i.AES_GCM_Encrypt_Init), (1080 bytes).
+    Removing crypto.o(i.AES_GCM_Header_Append), (406 bytes).
+    Removing crypto.o(i.AES_KeyWrap_Decrypt_Append), (302 bytes).
+    Removing crypto.o(i.AES_KeyWrap_Decrypt_Finish), (50 bytes).
+    Removing crypto.o(i.AES_KeyWrap_Decrypt_Init), (20 bytes).
+    Removing crypto.o(i.AES_KeyWrap_Encrypt_Append), (368 bytes).
+    Removing crypto.o(i.AES_KeyWrap_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.AES_KeyWrap_Encrypt_Init), (20 bytes).
+    Removing crypto.o(i.AESgcmAppend), (1142 bytes).
+    Removing crypto.o(i.AESgcmFinal), (570 bytes).
+    Removing crypto.o(i.AESstdInit), (420 bytes).
+    Removing crypto.o(i.ARC4_Decrypt_Append), (16 bytes).
+    Removing crypto.o(i.ARC4_Decrypt_Finish), (26 bytes).
+    Removing crypto.o(i.ARC4_Decrypt_Init), (132 bytes).
+    Removing crypto.o(i.ARC4_Encrypt_Append), (348 bytes).
+    Removing crypto.o(i.ARC4_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.ARC4_Encrypt_Init), (130 bytes).
+    Removing crypto.o(i.CountBytes), (50 bytes).
+    Removing crypto.o(i.DES_CBC_Decrypt_Append), (196 bytes).
+    Removing crypto.o(i.DES_CBC_Decrypt_Finish), (26 bytes).
+    Removing crypto.o(i.DES_CBC_Decrypt_Init), (6 bytes).
+    Removing crypto.o(i.DES_CBC_Encrypt_Append), (160 bytes).
+    Removing crypto.o(i.DES_CBC_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.DES_CBC_Encrypt_Init), (6 bytes).
+    Removing crypto.o(i.DES_ECB_Decrypt_Append), (172 bytes).
+    Removing crypto.o(i.DES_ECB_Decrypt_Finish), (26 bytes).
+    Removing crypto.o(i.DES_ECB_Decrypt_Init), (6 bytes).
+    Removing crypto.o(i.DES_ECB_Encrypt_Append), (172 bytes).
+    Removing crypto.o(i.DES_ECB_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.DES_ECB_Encrypt_Init), (6 bytes).
+    Removing crypto.o(i.DESstdInit), (248 bytes).
+    Removing crypto.o(i.ECCgetPointFlag), (12 bytes).
+    Removing crypto.o(i.ECCpoint2Monty), (70 bytes).
+    Removing crypto.o(i.ECCpointFromMonty), (72 bytes).
+    Removing crypto.o(i.ECCsetPointFlag), (8 bytes).
+    Removing crypto.o(i.ECCsetPrivKeyValue), (36 bytes).
+    Removing crypto.o(i.ECCsymmetricPoint), (42 bytes).
+    Removing crypto.o(i.EvenBig), (16 bytes).
+    Removing crypto.o(i.FastDivInnerBase), (64 bytes).
+    Removing crypto.o(i.FastMul2), (110 bytes).
+    Removing crypto.o(i.FastMulInnerBase), (164 bytes).
+    Removing crypto.o(i.GenRndBN), (242 bytes).
+    Removing crypto.o(i.GiveBit), (30 bytes).
+    Removing crypto.o(i.HMAC_MD5_Append), (52 bytes).
+    Removing crypto.o(i.HMAC_MD5_Finish), (180 bytes).
+    Removing crypto.o(i.HMAC_MD5_Init), (348 bytes).
+    Removing crypto.o(i.HMAC_SHA1_Append), (16 bytes).
+    Removing crypto.o(i.HMAC_SHA1_Finish), (160 bytes).
+    Removing crypto.o(i.HMAC_SHA1_Init), (340 bytes).
+    Removing crypto.o(i.HMAC_SHA224_Append), (52 bytes).
+    Removing crypto.o(i.HMAC_SHA224_Finish), (220 bytes).
+    Removing crypto.o(i.HMAC_SHA224_Init), (408 bytes).
+    Removing crypto.o(i.HMAC_SHA256_Append), (52 bytes).
+    Removing crypto.o(i.HMAC_SHA256_Finish), (220 bytes).
+    Removing crypto.o(i.HMAC_SHA256_Init), (408 bytes).
+    Removing crypto.o(i.IsZeroBig), (22 bytes).
+    Removing crypto.o(i.MD5_Append), (42 bytes).
+    Removing crypto.o(i.MD5_Finish), (144 bytes).
+    Removing crypto.o(i.MD5_Init), (60 bytes).
+    Removing crypto.o(i.ModularExpSlidWin), (616 bytes).
+    Removing crypto.o(i.ModularSubBig), (40 bytes).
+    Removing crypto.o(i.MontyKillR2), (38 bytes).
+    Removing crypto.o(i.MulBigbyUnInt), (112 bytes).
+    Removing crypto.o(i.RNGgenBytes), (162 bytes).
+    Removing crypto.o(i.RNGgenWords), (170 bytes).
+    Removing crypto.o(i.RNGreseed), (206 bytes).
+    Removing crypto.o(i.RSASP1), (100 bytes).
+    Removing crypto.o(i.RSAVP1), (34 bytes).
+    Removing crypto.o(i.RSA_PKCS1v15_Sign), (636 bytes).
+    Removing crypto.o(i.RSA_PKCS1v15_Verify), (724 bytes).
+    Removing crypto.o(i.SHA1Final), (392 bytes).
+    Removing crypto.o(i.SHA1Init), (48 bytes).
+    Removing crypto.o(i.SHA1Transform), (892 bytes).
+    Removing crypto.o(i.SHA1Update), (154 bytes).
+    Removing crypto.o(i.SHA1_Append), (188 bytes).
+    Removing crypto.o(i.SHA1_Finish), (144 bytes).
+    Removing crypto.o(i.SHA1_Init), (68 bytes).
+    Removing crypto.o(i.SHA224Final), (390 bytes).
+    Removing crypto.o(i.SHA224Init), (72 bytes).
+    Removing crypto.o(i.SHA224_Append), (42 bytes).
+    Removing crypto.o(i.SHA224_Finish), (144 bytes).
+    Removing crypto.o(i.SHA224_Init), (92 bytes).
+    Removing crypto.o(i.SHA256Init), (72 bytes).
+    Removing crypto.o(i.SignBig), (10 bytes).
+    Removing crypto.o(i.TDES_CBC_Decrypt_Append), (216 bytes).
+    Removing crypto.o(i.TDES_CBC_Decrypt_Finish), (26 bytes).
+    Removing crypto.o(i.TDES_CBC_Decrypt_Init), (6 bytes).
+    Removing crypto.o(i.TDES_CBC_Encrypt_Append), (184 bytes).
+    Removing crypto.o(i.TDES_CBC_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.TDES_CBC_Encrypt_Init), (6 bytes).
+    Removing crypto.o(i.TDES_ECB_Decrypt_Append), (192 bytes).
+    Removing crypto.o(i.TDES_ECB_Decrypt_Finish), (26 bytes).
+    Removing crypto.o(i.TDES_ECB_Decrypt_Init), (6 bytes).
+    Removing crypto.o(i.TDES_ECB_Encrypt_Append), (192 bytes).
+    Removing crypto.o(i.TDES_ECB_Encrypt_Finish), (26 bytes).
+    Removing crypto.o(i.TDES_ECB_Encrypt_Init), (6 bytes).
+    Removing crypto.o(i.TDESstdInit), (292 bytes).
+    Removing crypto.o(i.W32_to_W8), (124 bytes).
+    Removing crypto.o(i.crl_DRBG_AES128_Instantiate), (188 bytes).
+    Removing crypto.o(i.crl_DRBG_AES128_Reseed), (164 bytes).
+    Removing crypto.o(i.crl_ModularExp), (556 bytes).
+    Removing crypto.o(i.crl_u_MD5_Finish), (216 bytes).
+    Removing crypto.o(i.crl_u_MD5_Init), (40 bytes).
+    Removing crypto.o(i.crl_u_MD5_Update), (150 bytes).
+    Removing crypto.o(i.desfunc), (476 bytes).
+    Removing crypto.o(i.deskey), (628 bytes).
+    Removing crypto.o(i.gfmul), (364 bytes).
+    Removing crypto.o(i.md5_process), (2064 bytes).
+
+162 unused section(s) (total 35411 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi_2.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  noretval__2printf.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_x.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdio.c                          0x00000000   Number         0  ferror.o ABSOLUTE
+    ../clib/stdio.c                          0x00000000   Number         0  ferror_locked.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ..\CORE\core_cm3.c                       0x00000000   Number         0  core_cm3.o ABSOLUTE
+    ..\CORE\startup_stm32f10x_md.s           0x00000000   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    ..\Crypto_Sources_Files\crypto.c         0x00000000   Number         0  crypto.o ABSOLUTE
+    ..\ECC\user_ecc.c                        0x00000000   Number         0  user_ecc.o ABSOLUTE
+    ..\HARDWARE\KEY\key.c                    0x00000000   Number         0  key.o ABSOLUTE
+    ..\HARDWARE\LED\led.c                    0x00000000   Number         0  led.o ABSOLUTE
+    ..\HARDWARE\TIMER\timer.c                0x00000000   Number         0  timer.o ABSOLUTE
+    ..\STM32F10x_FWLib\src\misc.c            0x00000000   Number         0  misc.o ABSOLUTE
+    ..\STM32F10x_FWLib\src\stm32f10x_crc.c   0x00000000   Number         0  stm32f10x_crc.o ABSOLUTE
+    ..\STM32F10x_FWLib\src\stm32f10x_dma.c   0x00000000   Number         0  stm32f10x_dma.o ABSOLUTE
+    ..\STM32F10x_FWLib\src\stm32f10x_gpio.c  0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    ..\STM32F10x_FWLib\src\stm32f10x_rcc.c   0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    ..\STM32F10x_FWLib\src\stm32f10x_tim.c   0x00000000   Number         0  stm32f10x_tim.o ABSOLUTE
+    ..\STM32F10x_FWLib\src\stm32f10x_usart.c 0x00000000   Number         0  stm32f10x_usart.o ABSOLUTE
+    ..\SYSTEM\delay\delay.c                  0x00000000   Number         0  delay.o ABSOLUTE
+    ..\SYSTEM\sys\sys.c                      0x00000000   Number         0  sys.o ABSOLUTE
+    ..\SYSTEM\usart\usart.c                  0x00000000   Number         0  usart.o ABSOLUTE
+    ..\\CORE\\core_cm3.c                     0x00000000   Number         0  core_cm3.o ABSOLUTE
+    ..\\Crypto_Sources_Files\\crypto.c       0x00000000   Number         0  crypto.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    main2.c                                  0x00000000   Number         0  main2.o ABSOLUTE
+    stm32f10x_it.c                           0x00000000   Number         0  stm32f10x_it.o ABSOLUTE
+    system_stm32f10x.c                       0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    RESET                                    0x08000000   Section      236  startup_stm32f10x_md.o(RESET)
+    !!!main                                  0x080000ec   Section        8  __main.o(!!!main)
+    !!!scatter                               0x080000f4   Section       52  __scatter.o(!!!scatter)
+    !!handler_copy                           0x08000128   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x08000144   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$_printf_percent$$00000000  0x08000160   Section        0  _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000)
+    .ARM.Collect$$_printf_percent$$00000009  0x08000160   Section        6  _printf_d.o(.ARM.Collect$$_printf_percent$$00000009)
+    .ARM.Collect$$_printf_percent$$0000000C  0x08000166   Section        6  _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C)
+    .ARM.Collect$$_printf_percent$$00000017  0x0800016c   Section        4  _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017)
+    .ARM.Collect$$libinit$$00000000          0x08000170   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000008          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000008)
+    .ARM.Collect$$libinit$$0000000A          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000F          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000F)
+    .ARM.Collect$$libinit$$00000011          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$0000002A          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002A)
+    .ARM.Collect$$libinit$$0000002C          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x08000172   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000031          0x08000172   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000031)
+    .ARM.Collect$$libshutdown$$00000000      0x08000174   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000003      0x08000176   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000003)
+    .ARM.Collect$$libshutdown$$00000006      0x08000176   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    .ARM.Collect$$libshutdown$$00000009      0x08000176   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    .ARM.Collect$$libshutdown$$0000000B      0x08000176   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B)
+    .ARM.Collect$$libshutdown$$0000000E      0x08000176   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    .ARM.Collect$$libshutdown$$0000000F      0x08000176   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$rtentry$$00000000          0x08000178   Section        0  rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x08000178   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x08000178   Section        6  rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x0800017e   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x0800017e   Section        4  rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x08000182   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x08000182   Section        8  rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x0800018a   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x0800018c   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x0800018c   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x08000190   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x08000196   Section        0  stm32f10x_it.o(.text)
+    .text                                    0x080001b0   Section        0  system_stm32f10x.o(.text)
+    SetSysClockTo72                          0x080001b1   Thumb Code   192  system_stm32f10x.o(.text)
+    SetSysClock                              0x08000271   Thumb Code     8  system_stm32f10x.o(.text)
+    .text                                    0x08000378   Section        0  user_ecc.o(.text)
+    RNG_init_for_sign                        0x08000473   Thumb Code    72  user_ecc.o(.text)
+    HASH_DigestCompute                       0x080004bb   Thumb Code    84  user_ecc.o(.text)
+    .text                                    0x080008d8   Section        0  main2.o(.text)
+    .text                                    0x080009b4   Section        0  led.o(.text)
+    .text                                    0x08000a0c   Section        0  timer.o(.text)
+    .text                                    0x08000a90   Section        0  delay.o(.text)
+    .text                                    0x08000b38   Section        0  usart.o(.text)
+    .text                                    0x08000c78   Section       64  startup_stm32f10x_md.o(.text)
+    .text                                    0x08000cb8   Section        0  misc.o(.text)
+    .text                                    0x08000d94   Section        0  stm32f10x_gpio.o(.text)
+    .text                                    0x080010ec   Section        0  stm32f10x_rcc.o(.text)
+    .text                                    0x08001488   Section        0  stm32f10x_tim.o(.text)
+    TI4_Config                               0x0800192f   Thumb Code   130  stm32f10x_tim.o(.text)
+    TI3_Config                               0x080019c3   Thumb Code   122  stm32f10x_tim.o(.text)
+    TI2_Config                               0x08001a57   Thumb Code   130  stm32f10x_tim.o(.text)
+    TI1_Config                               0x08001aeb   Thumb Code   108  stm32f10x_tim.o(.text)
+    .text                                    0x080022a4   Section        0  stm32f10x_usart.o(.text)
+    .text                                    0x080026ac   Section        2  use_no_semi_2.o(.text)
+    .text                                    0x080026b0   Section        0  noretval__2printf.o(.text)
+    .text                                    0x080026c8   Section        0  __printf.o(.text)
+    .text                                    0x08002734   Section        0  _printf_dec.o(.text)
+    .text                                    0x080027ac   Section        0  _printf_hex_int.o(.text)
+    .text                                    0x08002808   Section      138  rt_memcpy_v6.o(.text)
+    .text                                    0x08002892   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x080028f6   Section       78  rt_memclr_w.o(.text)
+    .text                                    0x08002944   Section        0  heapauxi.o(.text)
+    .text                                    0x0800294a   Section        2  use_no_semi.o(.text)
+    .text                                    0x0800294c   Section        0  _printf_intcommon.o(.text)
+    .text                                    0x08002a04   Section        0  _printf_char_file.o(.text)
+    .text                                    0x08002a28   Section        0  _printf_char_common.o(.text)
+    _printf_input_char                       0x08002a29   Thumb Code    10  _printf_char_common.o(.text)
+    .text                                    0x08002a58   Section        0  ferror.o(.text)
+    .text                                    0x08002a60   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x08002aaa   Section        0  exit.o(.text)
+    .text                                    0x08002ab8   Section        8  libspace.o(.text)
+    i.AES128_encrypt                         0x08002ac0   Section        0  crypto.o(i.AES128_encrypt)
+    i.AES128_keyschedule_enc                 0x08002dd0   Section        0  crypto.o(i.AES128_keyschedule_enc)
+    i.AddBig                                 0x08002e44   Section        0  crypto.o(i.AddBig)
+    i.Add_Moduli_Big                         0x08002f84   Section        0  crypto.o(i.Add_Moduli_Big)
+    Add_Moduli_Big                           0x08002f85   Thumb Code   454  crypto.o(i.Add_Moduli_Big)
+    i.Big_to_W8                              0x0800314c   Section        0  crypto.o(i.Big_to_W8)
+    i.Big_to_fixedW8                         0x08003200   Section        0  crypto.o(i.Big_to_fixedW8)
+    i.CompareBig                             0x0800328c   Section        0  crypto.o(i.CompareBig)
+    i.CopyBig                                0x08003334   Section        0  crypto.o(i.CopyBig)
+    i.CountBits                              0x080033d2   Section        0  crypto.o(i.CountBits)
+    i.Crypto_DeInit                          0x08003402   Section        0  crypto.o(i.Crypto_DeInit)
+    i.DRBG_AES128_Block_cipher_df            0x0800340c   Section        0  crypto.o(i.DRBG_AES128_Block_cipher_df)
+    DRBG_AES128_Block_cipher_df              0x0800340d   Thumb Code   378  crypto.o(i.DRBG_AES128_Block_cipher_df)
+    i.DRBG_AES128_Update                     0x0800358c   Section        0  crypto.o(i.DRBG_AES128_Update)
+    DRBG_AES128_Update                       0x0800358d   Thumb Code   134  crypto.o(i.DRBG_AES128_Update)
+    i.ECCcopyPoint                           0x08003612   Section        0  crypto.o(i.ECCcopyPoint)
+    i.ECCfreeEC                              0x08003678   Section        0  crypto.o(i.ECCfreeEC)
+    i.ECCfreePoint                           0x080036f4   Section        0  crypto.o(i.ECCfreePoint)
+    i.ECCfreePrivKey                         0x08003736   Section        0  crypto.o(i.ECCfreePrivKey)
+    i.ECCgetPointCoordinate                  0x08003764   Section        0  crypto.o(i.ECCgetPointCoordinate)
+    i.ECCgetPrivKeyValue                     0x08003820   Section        0  crypto.o(i.ECCgetPrivKeyValue)
+    i.ECCinitEC                              0x080038a0   Section        0  crypto.o(i.ECCinitEC)
+    i.ECCinitPoint                           0x08003a58   Section        0  crypto.o(i.ECCinitPoint)
+    i.ECCinitPrivKey                         0x08003b28   Section        0  crypto.o(i.ECCinitPrivKey)
+    i.ECCkeyGen                              0x08003b96   Section        0  crypto.o(i.ECCkeyGen)
+    i.ECCscalarMul                           0x08003c70   Section        0  crypto.o(i.ECCscalarMul)
+    i.ECCsetPointCoordinate                  0x08003d5c   Section        0  crypto.o(i.ECCsetPointCoordinate)
+    i.ECCsetPointGenerator                   0x08003da8   Section        0  crypto.o(i.ECCsetPointGenerator)
+    i.ECCvalidatePubKey                      0x08003e28   Section        0  crypto.o(i.ECCvalidatePubKey)
+    i.ECDSAfreeSign                          0x08004088   Section        0  crypto.o(i.ECDSAfreeSign)
+    i.ECDSAgetSignature                      0x080040c0   Section        0  crypto.o(i.ECDSAgetSignature)
+    i.ECDSAinitSign                          0x08004164   Section        0  crypto.o(i.ECDSAinitSign)
+    i.ECDSAsetSignature                      0x080041e0   Section        0  crypto.o(i.ECDSAsetSignature)
+    i.ECDSAsign                              0x08004210   Section        0  crypto.o(i.ECDSAsign)
+    i.ECDSAverify                            0x08004772   Section        0  crypto.o(i.ECDSAverify)
+    i.FastDiv2                               0x08004a9c   Section        0  crypto.o(i.FastDiv2)
+    i.GenRndBNmodN                           0x08004afe   Section        0  crypto.o(i.GenRndBNmodN)
+    i.InitBig                                0x08004c10   Section        0  crypto.o(i.InitBig)
+    i.LeftShift                              0x08004c78   Section        0  crypto.o(i.LeftShift)
+    i.ModularAddBig                          0x08004d08   Section        0  crypto.o(i.ModularAddBig)
+    i.ModularFastMul2                        0x08004d4c   Section        0  crypto.o(i.ModularFastMul2)
+    i.ModularInvBig                          0x08004dd6   Section        0  crypto.o(i.ModularInvBig)
+    i.MontyExit                              0x08004ff2   Section        0  crypto.o(i.MontyExit)
+    i.MontyInit                              0x0800504c   Section        0  crypto.o(i.MontyInit)
+    i.MontyJacProjAddPoints                  0x080053b6   Section        0  crypto.o(i.MontyJacProjAddPoints)
+    i.MontyJacProjDoublePoint                0x08005734   Section        0  crypto.o(i.MontyJacProjDoublePoint)
+    i.MontyKillAll                           0x08005a3e   Section        0  crypto.o(i.MontyKillAll)
+    i.MontyMul                               0x08005a70   Section        0  crypto.o(i.MontyMul)
+    i.NAF_Binary_PointMul                    0x08005c7c   Section        0  crypto.o(i.NAF_Binary_PointMul)
+    i.Normalize                              0x08005fd8   Section        0  crypto.o(i.Normalize)
+    i.RNGfree                                0x08006148   Section        0  crypto.o(i.RNGfree)
+    i.RNGinit                                0x0800617c   Section        0  crypto.o(i.RNGinit)
+    i.RightShift                             0x0800626c   Section        0  crypto.o(i.RightShift)
+    i.SHA256Final                            0x0800631c   Section        0  crypto.o(i.SHA256Final)
+    i.SHA256Transform                        0x080064a4   Section        0  crypto.o(i.SHA256Transform)
+    SHA256Transform                          0x080064a5   Thumb Code   588  crypto.o(i.SHA256Transform)
+    i.SHA256Update                           0x080066fc   Section        0  crypto.o(i.SHA256Update)
+    i.SHA256_Append                          0x08006796   Section        0  crypto.o(i.SHA256_Append)
+    i.SHA256_Finish                          0x080067c0   Section        0  crypto.o(i.SHA256_Finish)
+    i.SHA256_Init                            0x08006850   Section        0  crypto.o(i.SHA256_Init)
+    i.SetZeroBig                             0x080068ac   Section        0  crypto.o(i.SetZeroBig)
+    i.StAllocBig                             0x080068f2   Section        0  crypto.o(i.StAllocBig)
+    i.StFreeBig                              0x08006934   Section        0  crypto.o(i.StFreeBig)
+    i.SubBig                                 0x08006958   Section        0  crypto.o(i.SubBig)
+    i.Sub_Moduli_Big                         0x08006a42   Section        0  crypto.o(i.Sub_Moduli_Big)
+    i.W8_to_Big                              0x08006bf8   Section        0  crypto.o(i.W8_to_Big)
+    i.crl_DRBG_AES128_Generate               0x08006d40   Section        0  crypto.o(i.crl_DRBG_AES128_Generate)
+    .constdata                               0x08006f02   Section      240  user_ecc.o(.constdata)
+    .constdata                               0x08006ff4   Section     6040  crypto.o(.constdata)
+    table_reduction8                         0x08007a1c   Data         512  crypto.o(.constdata)
+    table_reduction4                         0x08007c1c   Data          32  crypto.o(.constdata)
+    pad                                      0x080085ac   Data          64  crypto.o(.constdata)
+    .constdata                               0x0800878c   Section       40  _printf_hex_int.o(.constdata)
+    uc_hextab                                0x0800878c   Data          20  _printf_hex_int.o(.constdata)
+    lc_hextab                                0x080087a0   Data          20  _printf_hex_int.o(.constdata)
+    .data                                    0x20000000   Section       20  system_stm32f10x.o(.data)
+    .data                                    0x20000014   Section       12  main2.o(.data)
+    .data                                    0x20000020   Section        4  timer.o(.data)
+    .data                                    0x20000024   Section        4  delay.o(.data)
+    fac_us                                   0x20000024   Data           1  delay.o(.data)
+    fac_ms                                   0x20000026   Data           2  delay.o(.data)
+    .data                                    0x20000028   Section        8  usart.o(.data)
+    .data                                    0x20000030   Section       20  stm32f10x_rcc.o(.data)
+    APBAHBPrescTable                         0x20000030   Data          16  stm32f10x_rcc.o(.data)
+    ADCPrescTable                            0x20000040   Data           4  stm32f10x_rcc.o(.data)
+    .bss                                     0x20000044   Section     4328  user_ecc.o(.bss)
+    preallocated_buffer                      0x20000044   Data        4096  user_ecc.o(.bss)
+    .bss                                     0x2000112c   Section      520  main2.o(.bss)
+    .bss                                     0x20001334   Section       64  usart.o(.bss)
+    .bss                                     0x20001374   Section       96  libspace.o(.bss)
+    HEAP                                     0x200013d8   Section      512  startup_stm32f10x_md.o(HEAP)
+    Heap_Mem                                 0x200013d8   Data         512  startup_stm32f10x_md.o(HEAP)
+    STACK                                    0x200015d8   Section     1024  startup_stm32f10x_md.o(STACK)
+    Stack_Mem                                0x200015d8   Data        1024  startup_stm32f10x_md.o(STACK)
+    __initial_sp                             0x200019d8   Data           0  startup_stm32f10x_md.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main2.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _mutex_acquire                            - Undefined Weak Reference
+    _mutex_release                            - Undefined Weak Reference
+    _printf_post_padding                      - Undefined Weak Reference
+    _printf_pre_padding                       - Undefined Weak Reference
+    _printf_truncate_signed                   - Undefined Weak Reference
+    _printf_truncate_unsigned                 - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x000000ec   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_md.o(RESET)
+    __Vectors_End                            0x080000ec   Data           0  startup_stm32f10x_md.o(RESET)
+    __main                                   0x080000ed   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x080000f5   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x080000f5   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x080000f5   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x08000103   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x08000129   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x08000145   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    _printf_d                                0x08000161   Thumb Code     0  _printf_d.o(.ARM.Collect$$_printf_percent$$00000009)
+    _printf_percent                          0x08000161   Thumb Code     0  _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000)
+    _printf_x                                0x08000167   Thumb Code     0  _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C)
+    _printf_percent_end                      0x0800016d   Thumb Code     0  _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017)
+    __rt_lib_init                            0x08000171   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_argv_1                     0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002A)
+    __rt_lib_init_atexit_1                   0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_clock_1                    0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_cpp_1                      0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_exceptions_1               0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_fp_1                       0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_getenv_1                   0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_heap_1                     0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000008)
+    __rt_lib_init_lc_collate_1               0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000F)
+    __rt_lib_init_lc_ctype_1                 0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_monetary_1              0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_numeric_1               0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_time_1                  0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_rand_1                     0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_init_return                     0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000031)
+    __rt_lib_init_signal_1                   0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_stdio_1                    0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_user_alloc_1               0x08000173   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_shutdown                        0x08000175   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_fp_trap_1              0x08000177   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    __rt_lib_shutdown_heap_1                 0x08000177   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    __rt_lib_shutdown_return                 0x08000177   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_signal_1               0x08000177   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    __rt_lib_shutdown_stdio_1                0x08000177   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000003)
+    __rt_lib_shutdown_user_alloc_1           0x08000177   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B)
+    __rt_entry                               0x08000179   Thumb Code     0  rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x08000179   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x08000179   Thumb Code     0  rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x0800017f   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x0800017f   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x08000183   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x08000183   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x0800018b   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x0800018d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x0800018d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x08000191   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    NMI_Handler                              0x08000197   Thumb Code     2  stm32f10x_it.o(.text)
+    HardFault_Handler                        0x08000199   Thumb Code     4  stm32f10x_it.o(.text)
+    MemManage_Handler                        0x0800019d   Thumb Code     4  stm32f10x_it.o(.text)
+    BusFault_Handler                         0x080001a1   Thumb Code     4  stm32f10x_it.o(.text)
+    UsageFault_Handler                       0x080001a5   Thumb Code     4  stm32f10x_it.o(.text)
+    SVC_Handler                              0x080001a9   Thumb Code     2  stm32f10x_it.o(.text)
+    DebugMon_Handler                         0x080001ab   Thumb Code     2  stm32f10x_it.o(.text)
+    PendSV_Handler                           0x080001ad   Thumb Code     2  stm32f10x_it.o(.text)
+    SysTick_Handler                          0x080001af   Thumb Code     2  stm32f10x_it.o(.text)
+    SystemInit                               0x08000279   Thumb Code    78  system_stm32f10x.o(.text)
+    SystemCoreClockUpdate                    0x080002c7   Thumb Code   142  system_stm32f10x.o(.text)
+    EC_paraTestInit                          0x08000379   Thumb Code    78  user_ecc.o(.text)
+    fun_print                                0x080003c7   Thumb Code    24  user_ecc.o(.text)
+    prinfInfo                                0x080003df   Thumb Code   148  user_ecc.o(.text)
+    ECCSignVerify                            0x0800050f   Thumb Code   350  user_ecc.o(.text)
+    ECCKeyPairSignGenerate                   0x0800066d   Thumb Code   620  user_ecc.o(.text)
+    ECCSign                                  0x080008d9   Thumb Code    92  main2.o(.text)
+    main                                     0x08000935   Thumb Code    98  main2.o(.text)
+    LED_Init                                 0x080009b5   Thumb Code    80  led.o(.text)
+    TIM3_Int_Init                            0x08000a0d   Thumb Code    90  timer.o(.text)
+    TIM3_IRQHandler                          0x08000a67   Thumb Code    32  timer.o(.text)
+    delay_init                               0x08000a91   Thumb Code    50  delay.o(.text)
+    delay_ms                                 0x08000ac3   Thumb Code    54  delay.o(.text)
+    delay_us                                 0x08000af9   Thumb Code    54  delay.o(.text)
+    _sys_exit                                0x08000b39   Thumb Code     6  usart.o(.text)
+    fputc                                    0x08000b3f   Thumb Code    22  usart.o(.text)
+    uart_init                                0x08000b55   Thumb Code   152  usart.o(.text)
+    USART1_IRQHandler                        0x08000bed   Thumb Code   122  usart.o(.text)
+    Reset_Handler                            0x08000c79   Thumb Code     8  startup_stm32f10x_md.o(.text)
+    ADC1_2_IRQHandler                        0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_RX1_IRQHandler                      0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_SCE_IRQHandler                      0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel2_IRQHandler                 0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel3_IRQHandler                 0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel4_IRQHandler                 0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel5_IRQHandler                 0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel6_IRQHandler                 0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel7_IRQHandler                 0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI0_IRQHandler                         0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI15_10_IRQHandler                     0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI1_IRQHandler                         0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI2_IRQHandler                         0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI3_IRQHandler                         0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI4_IRQHandler                         0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI9_5_IRQHandler                       0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    FLASH_IRQHandler                         0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_ER_IRQHandler                       0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_EV_IRQHandler                       0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_ER_IRQHandler                       0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_EV_IRQHandler                       0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    PVD_IRQHandler                           0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RCC_IRQHandler                           0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTCAlarm_IRQHandler                      0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTC_IRQHandler                           0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI1_IRQHandler                          0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI2_IRQHandler                          0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TAMPER_IRQHandler                        0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_BRK_IRQHandler                      0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_CC_IRQHandler                       0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_UP_IRQHandler                       0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM2_IRQHandler                          0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM4_IRQHandler                          0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART2_IRQHandler                        0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART3_IRQHandler                        0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USBWakeUp_IRQHandler                     0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    WWDG_IRQHandler                          0x08000c93   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __user_initial_stackheap                 0x08000c95   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    NVIC_PriorityGroupConfig                 0x08000cb9   Thumb Code    10  misc.o(.text)
+    NVIC_Init                                0x08000cc3   Thumb Code   102  misc.o(.text)
+    NVIC_SetVectorTable                      0x08000d29   Thumb Code    14  misc.o(.text)
+    NVIC_SystemLPConfig                      0x08000d37   Thumb Code    34  misc.o(.text)
+    SysTick_CLKSourceConfig                  0x08000d59   Thumb Code    40  misc.o(.text)
+    GPIO_DeInit                              0x08000d95   Thumb Code   172  stm32f10x_gpio.o(.text)
+    GPIO_AFIODeInit                          0x08000e41   Thumb Code    20  stm32f10x_gpio.o(.text)
+    GPIO_Init                                0x08000e55   Thumb Code   274  stm32f10x_gpio.o(.text)
+    GPIO_StructInit                          0x08000f67   Thumb Code    16  stm32f10x_gpio.o(.text)
+    GPIO_ReadInputDataBit                    0x08000f77   Thumb Code    18  stm32f10x_gpio.o(.text)
+    GPIO_ReadInputData                       0x08000f89   Thumb Code     8  stm32f10x_gpio.o(.text)
+    GPIO_ReadOutputDataBit                   0x08000f91   Thumb Code    18  stm32f10x_gpio.o(.text)
+    GPIO_ReadOutputData                      0x08000fa3   Thumb Code     8  stm32f10x_gpio.o(.text)
+    GPIO_SetBits                             0x08000fab   Thumb Code     4  stm32f10x_gpio.o(.text)
+    GPIO_ResetBits                           0x08000faf   Thumb Code     4  stm32f10x_gpio.o(.text)
+    GPIO_WriteBit                            0x08000fb3   Thumb Code    10  stm32f10x_gpio.o(.text)
+    GPIO_Write                               0x08000fbd   Thumb Code     4  stm32f10x_gpio.o(.text)
+    GPIO_PinLockConfig                       0x08000fc1   Thumb Code    18  stm32f10x_gpio.o(.text)
+    GPIO_EventOutputConfig                   0x08000fd3   Thumb Code    26  stm32f10x_gpio.o(.text)
+    GPIO_EventOutputCmd                      0x08000fed   Thumb Code     6  stm32f10x_gpio.o(.text)
+    GPIO_PinRemapConfig                      0x08000ff3   Thumb Code   138  stm32f10x_gpio.o(.text)
+    GPIO_EXTILineConfig                      0x0800107d   Thumb Code    66  stm32f10x_gpio.o(.text)
+    GPIO_ETH_MediaInterfaceConfig            0x080010bf   Thumb Code     6  stm32f10x_gpio.o(.text)
+    RCC_DeInit                               0x080010ed   Thumb Code    64  stm32f10x_rcc.o(.text)
+    RCC_HSEConfig                            0x0800112d   Thumb Code    70  stm32f10x_rcc.o(.text)
+    RCC_GetFlagStatus                        0x08001173   Thumb Code    56  stm32f10x_rcc.o(.text)
+    RCC_WaitForHSEStartUp                    0x080011ab   Thumb Code    48  stm32f10x_rcc.o(.text)
+    RCC_AdjustHSICalibrationValue            0x080011db   Thumb Code    20  stm32f10x_rcc.o(.text)
+    RCC_HSICmd                               0x080011ef   Thumb Code     6  stm32f10x_rcc.o(.text)
+    RCC_PLLConfig                            0x080011f5   Thumb Code    24  stm32f10x_rcc.o(.text)
+    RCC_PLLCmd                               0x0800120d   Thumb Code     6  stm32f10x_rcc.o(.text)
+    RCC_SYSCLKConfig                         0x08001213   Thumb Code    18  stm32f10x_rcc.o(.text)
+    RCC_GetSYSCLKSource                      0x08001225   Thumb Code    10  stm32f10x_rcc.o(.text)
+    RCC_HCLKConfig                           0x0800122f   Thumb Code    18  stm32f10x_rcc.o(.text)
+    RCC_PCLK1Config                          0x08001241   Thumb Code    18  stm32f10x_rcc.o(.text)
+    RCC_PCLK2Config                          0x08001253   Thumb Code    20  stm32f10x_rcc.o(.text)
+    RCC_ITConfig                             0x08001267   Thumb Code    26  stm32f10x_rcc.o(.text)
+    RCC_USBCLKConfig                         0x08001281   Thumb Code     6  stm32f10x_rcc.o(.text)
+    RCC_ADCCLKConfig                         0x08001287   Thumb Code    18  stm32f10x_rcc.o(.text)
+    RCC_LSEConfig                            0x08001299   Thumb Code    44  stm32f10x_rcc.o(.text)
+    RCC_LSICmd                               0x080012c5   Thumb Code     6  stm32f10x_rcc.o(.text)
+    RCC_RTCCLKConfig                         0x080012cb   Thumb Code    12  stm32f10x_rcc.o(.text)
+    RCC_RTCCLKCmd                            0x080012d7   Thumb Code     8  stm32f10x_rcc.o(.text)
+    RCC_GetClocksFreq                        0x080012df   Thumb Code   192  stm32f10x_rcc.o(.text)
+    RCC_AHBPeriphClockCmd                    0x0800139f   Thumb Code    26  stm32f10x_rcc.o(.text)
+    RCC_APB2PeriphClockCmd                   0x080013b9   Thumb Code    26  stm32f10x_rcc.o(.text)
+    RCC_APB1PeriphClockCmd                   0x080013d3   Thumb Code    26  stm32f10x_rcc.o(.text)
+    RCC_APB2PeriphResetCmd                   0x080013ed   Thumb Code    26  stm32f10x_rcc.o(.text)
+    RCC_APB1PeriphResetCmd                   0x08001407   Thumb Code    26  stm32f10x_rcc.o(.text)
+    RCC_BackupResetCmd                       0x08001421   Thumb Code     8  stm32f10x_rcc.o(.text)
+    RCC_ClockSecuritySystemCmd               0x08001429   Thumb Code     6  stm32f10x_rcc.o(.text)
+    RCC_MCOConfig                            0x0800142f   Thumb Code     6  stm32f10x_rcc.o(.text)
+    RCC_ClearFlag                            0x08001435   Thumb Code    14  stm32f10x_rcc.o(.text)
+    RCC_GetITStatus                          0x08001443   Thumb Code    20  stm32f10x_rcc.o(.text)
+    RCC_ClearITPendingBit                    0x08001457   Thumb Code     6  stm32f10x_rcc.o(.text)
+    TIM_DeInit                               0x08001489   Thumb Code   424  stm32f10x_tim.o(.text)
+    TIM_TimeBaseInit                         0x08001631   Thumb Code   122  stm32f10x_tim.o(.text)
+    TIM_OC1Init                              0x080016ab   Thumb Code   132  stm32f10x_tim.o(.text)
+    TIM_OC2Init                              0x0800172f   Thumb Code   154  stm32f10x_tim.o(.text)
+    TIM_OC3Init                              0x080017c9   Thumb Code   150  stm32f10x_tim.o(.text)
+    TIM_OC4Init                              0x0800185f   Thumb Code   182  stm32f10x_tim.o(.text)
+    TIM_SetIC4Prescaler                      0x08001915   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_SetIC3Prescaler                      0x080019b1   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_SetIC2Prescaler                      0x08001a3d   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_SetIC1Prescaler                      0x08001ad9   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_ICInit                               0x08001b57   Thumb Code   150  stm32f10x_tim.o(.text)
+    TIM_PWMIConfig                           0x08001bed   Thumb Code   124  stm32f10x_tim.o(.text)
+    TIM_BDTRConfig                           0x08001c69   Thumb Code    32  stm32f10x_tim.o(.text)
+    TIM_TimeBaseStructInit                   0x08001c89   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_OCStructInit                         0x08001c9b   Thumb Code    20  stm32f10x_tim.o(.text)
+    TIM_ICStructInit                         0x08001caf   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_BDTRStructInit                       0x08001cc1   Thumb Code    40  stm32f10x_tim.o(.text)
+    TIM_Cmd                                  0x08001ce9   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_CtrlPWMOutputs                       0x08001d01   Thumb Code    30  stm32f10x_tim.o(.text)
+    TIM_ITConfig                             0x08001d1f   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_GenerateEvent                        0x08001d31   Thumb Code     4  stm32f10x_tim.o(.text)
+    TIM_DMAConfig                            0x08001d35   Thumb Code    10  stm32f10x_tim.o(.text)
+    TIM_DMACmd                               0x08001d3f   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_InternalClockConfig                  0x08001d51   Thumb Code    12  stm32f10x_tim.o(.text)
+    TIM_SelectInputTrigger                   0x08001d5d   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_ITRxExternalClockConfig              0x08001d6f   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_TIxExternalClockConfig               0x08001d87   Thumb Code    62  stm32f10x_tim.o(.text)
+    TIM_ETRConfig                            0x08001dc5   Thumb Code    28  stm32f10x_tim.o(.text)
+    TIM_ETRClockMode1Config                  0x08001de1   Thumb Code    54  stm32f10x_tim.o(.text)
+    TIM_ETRClockMode2Config                  0x08001e17   Thumb Code    32  stm32f10x_tim.o(.text)
+    TIM_PrescalerConfig                      0x08001e37   Thumb Code     6  stm32f10x_tim.o(.text)
+    TIM_CounterModeConfig                    0x08001e3d   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_EncoderInterfaceConfig               0x08001e4f   Thumb Code    66  stm32f10x_tim.o(.text)
+    TIM_ForcedOC1Config                      0x08001e91   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_ForcedOC2Config                      0x08001ea3   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_ForcedOC3Config                      0x08001ebd   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_ForcedOC4Config                      0x08001ecf   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_ARRPreloadConfig                     0x08001ee9   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_SelectCOM                            0x08001f01   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_SelectCCDMA                          0x08001f19   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_CCPreloadControl                     0x08001f31   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_OC1PreloadConfig                     0x08001f49   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_OC2PreloadConfig                     0x08001f5b   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_OC3PreloadConfig                     0x08001f75   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_OC4PreloadConfig                     0x08001f87   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_OC1FastConfig                        0x08001fa1   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_OC2FastConfig                        0x08001fb3   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_OC3FastConfig                        0x08001fcd   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_OC4FastConfig                        0x08001fdf   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_ClearOC1Ref                          0x08001ff9   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_ClearOC2Ref                          0x0800200b   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_ClearOC3Ref                          0x08002023   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_ClearOC4Ref                          0x08002035   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_OC1PolarityConfig                    0x0800204d   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_OC1NPolarityConfig                   0x0800205f   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_OC2PolarityConfig                    0x08002071   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_OC2NPolarityConfig                   0x0800208b   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_OC3PolarityConfig                    0x080020a5   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_OC3NPolarityConfig                   0x080020bf   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_OC4PolarityConfig                    0x080020d9   Thumb Code    26  stm32f10x_tim.o(.text)
+    TIM_CCxCmd                               0x080020f3   Thumb Code    30  stm32f10x_tim.o(.text)
+    TIM_CCxNCmd                              0x08002111   Thumb Code    30  stm32f10x_tim.o(.text)
+    TIM_SelectOCxM                           0x0800212f   Thumb Code    82  stm32f10x_tim.o(.text)
+    TIM_UpdateDisableConfig                  0x08002181   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_UpdateRequestConfig                  0x08002199   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_SelectHallSensor                     0x080021b1   Thumb Code    24  stm32f10x_tim.o(.text)
+    TIM_SelectOnePulseMode                   0x080021c9   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_SelectOutputTrigger                  0x080021db   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_SelectSlaveMode                      0x080021ed   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_SelectMasterSlaveMode                0x080021ff   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_SetCounter                           0x08002211   Thumb Code     4  stm32f10x_tim.o(.text)
+    TIM_SetAutoreload                        0x08002215   Thumb Code     4  stm32f10x_tim.o(.text)
+    TIM_SetCompare1                          0x08002219   Thumb Code     4  stm32f10x_tim.o(.text)
+    TIM_SetCompare2                          0x0800221d   Thumb Code     4  stm32f10x_tim.o(.text)
+    TIM_SetCompare3                          0x08002221   Thumb Code     4  stm32f10x_tim.o(.text)
+    TIM_SetCompare4                          0x08002225   Thumb Code     6  stm32f10x_tim.o(.text)
+    TIM_SetClockDivision                     0x0800222b   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_GetCapture1                          0x0800223d   Thumb Code     6  stm32f10x_tim.o(.text)
+    TIM_GetCapture2                          0x08002243   Thumb Code     6  stm32f10x_tim.o(.text)
+    TIM_GetCapture3                          0x08002249   Thumb Code     6  stm32f10x_tim.o(.text)
+    TIM_GetCapture4                          0x0800224f   Thumb Code     8  stm32f10x_tim.o(.text)
+    TIM_GetCounter                           0x08002257   Thumb Code     6  stm32f10x_tim.o(.text)
+    TIM_GetPrescaler                         0x0800225d   Thumb Code     6  stm32f10x_tim.o(.text)
+    TIM_GetFlagStatus                        0x08002263   Thumb Code    18  stm32f10x_tim.o(.text)
+    TIM_ClearFlag                            0x08002275   Thumb Code     6  stm32f10x_tim.o(.text)
+    TIM_GetITStatus                          0x0800227b   Thumb Code    34  stm32f10x_tim.o(.text)
+    TIM_ClearITPendingBit                    0x0800229d   Thumb Code     6  stm32f10x_tim.o(.text)
+    USART_DeInit                             0x080022a5   Thumb Code   134  stm32f10x_usart.o(.text)
+    USART_Init                               0x0800232b   Thumb Code   210  stm32f10x_usart.o(.text)
+    USART_StructInit                         0x080023fd   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_ClockInit                          0x08002415   Thumb Code    34  stm32f10x_usart.o(.text)
+    USART_ClockStructInit                    0x08002437   Thumb Code    12  stm32f10x_usart.o(.text)
+    USART_Cmd                                0x08002443   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_ITConfig                           0x0800245b   Thumb Code    74  stm32f10x_usart.o(.text)
+    USART_DMACmd                             0x080024a5   Thumb Code    18  stm32f10x_usart.o(.text)
+    USART_SetAddress                         0x080024b7   Thumb Code    18  stm32f10x_usart.o(.text)
+    USART_WakeUpConfig                       0x080024c9   Thumb Code    18  stm32f10x_usart.o(.text)
+    USART_ReceiverWakeUpCmd                  0x080024db   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_LINBreakDetectLengthConfig         0x080024f3   Thumb Code    18  stm32f10x_usart.o(.text)
+    USART_LINCmd                             0x08002505   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_SendData                           0x0800251d   Thumb Code     8  stm32f10x_usart.o(.text)
+    USART_ReceiveData                        0x08002525   Thumb Code    10  stm32f10x_usart.o(.text)
+    USART_SendBreak                          0x0800252f   Thumb Code    10  stm32f10x_usart.o(.text)
+    USART_SetGuardTime                       0x08002539   Thumb Code    16  stm32f10x_usart.o(.text)
+    USART_SetPrescaler                       0x08002549   Thumb Code    16  stm32f10x_usart.o(.text)
+    USART_SmartCardCmd                       0x08002559   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_SmartCardNACKCmd                   0x08002571   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_HalfDuplexCmd                      0x08002589   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_OverSampling8Cmd                   0x080025a1   Thumb Code    22  stm32f10x_usart.o(.text)
+    USART_OneBitMethodCmd                    0x080025b7   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_IrDAConfig                         0x080025cf   Thumb Code    18  stm32f10x_usart.o(.text)
+    USART_IrDACmd                            0x080025e1   Thumb Code    24  stm32f10x_usart.o(.text)
+    USART_GetFlagStatus                      0x080025f9   Thumb Code    26  stm32f10x_usart.o(.text)
+    USART_ClearFlag                          0x08002613   Thumb Code    18  stm32f10x_usart.o(.text)
+    USART_GetITStatus                        0x08002625   Thumb Code    84  stm32f10x_usart.o(.text)
+    USART_ClearITPendingBit                  0x08002679   Thumb Code    52  stm32f10x_usart.o(.text)
+    __use_no_semihosting                     0x080026ad   Thumb Code     2  use_no_semi_2.o(.text)
+    __2printf                                0x080026b1   Thumb Code    20  noretval__2printf.o(.text)
+    __printf                                 0x080026c9   Thumb Code   106  __printf.o(.text)
+    _printf_int_dec                          0x08002735   Thumb Code   102  _printf_dec.o(.text)
+    _printf_int_hex                          0x080027ad   Thumb Code    88  _printf_hex_int.o(.text)
+    _printf_longlong_hex                     0x080027ad   Thumb Code     0  _printf_hex_int.o(.text)
+    __aeabi_memcpy                           0x08002809   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __rt_memcpy                              0x08002809   Thumb Code   138  rt_memcpy_v6.o(.text)
+    _memcpy_lastbytes                        0x0800286f   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __aeabi_memcpy4                          0x08002893   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x08002893   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x08002893   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x080028db   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memclr4                          0x080028f7   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x080028f7   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x080028f7   Thumb Code    78  rt_memclr_w.o(.text)
+    _memset_w                                0x080028fb   Thumb Code     0  rt_memclr_w.o(.text)
+    __use_two_region_memory                  0x08002945   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x08002947   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08002949   Thumb Code     2  heapauxi.o(.text)
+    __I$use$semihosting                      0x0800294b   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x0800294b   Thumb Code     2  use_no_semi.o(.text)
+    _printf_int_common                       0x0800294d   Thumb Code   184  _printf_intcommon.o(.text)
+    _printf_char_file                        0x08002a05   Thumb Code    32  _printf_char_file.o(.text)
+    _printf_char_common                      0x08002a33   Thumb Code    32  _printf_char_common.o(.text)
+    ferror                                   0x08002a59   Thumb Code     8  ferror.o(.text)
+    __user_setup_stackheap                   0x08002a61   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x08002aab   Thumb Code    12  exit.o(.text)
+    __user_libspace                          0x08002ab9   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x08002ab9   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x08002ab9   Thumb Code     0  libspace.o(.text)
+    AES128_encrypt                           0x08002ac1   Thumb Code   770  crypto.o(i.AES128_encrypt)
+    AES128_keyschedule_enc                   0x08002dd1   Thumb Code   112  crypto.o(i.AES128_keyschedule_enc)
+    AddBig                                   0x08002e45   Thumb Code   318  crypto.o(i.AddBig)
+    Big_to_W8                                0x0800314d   Thumb Code   180  crypto.o(i.Big_to_W8)
+    Big_to_fixedW8                           0x08003201   Thumb Code   140  crypto.o(i.Big_to_fixedW8)
+    CompareBig                               0x0800328d   Thumb Code   166  crypto.o(i.CompareBig)
+    CopyBig                                  0x08003335   Thumb Code   158  crypto.o(i.CopyBig)
+    CountBits                                0x080033d3   Thumb Code    48  crypto.o(i.CountBits)
+    Crypto_DeInit                            0x08003403   Thumb Code     8  crypto.o(i.Crypto_DeInit)
+    ECCcopyPoint                             0x08003613   Thumb Code   102  crypto.o(i.ECCcopyPoint)
+    ECCfreeEC                                0x08003679   Thumb Code   124  crypto.o(i.ECCfreeEC)
+    ECCfreePoint                             0x080036f5   Thumb Code    66  crypto.o(i.ECCfreePoint)
+    ECCfreePrivKey                           0x08003737   Thumb Code    46  crypto.o(i.ECCfreePrivKey)
+    ECCgetPointCoordinate                    0x08003765   Thumb Code   182  crypto.o(i.ECCgetPointCoordinate)
+    ECCgetPrivKeyValue                       0x08003821   Thumb Code   122  crypto.o(i.ECCgetPrivKeyValue)
+    ECCinitEC                                0x080038a1   Thumb Code   440  crypto.o(i.ECCinitEC)
+    ECCinitPoint                             0x08003a59   Thumb Code   208  crypto.o(i.ECCinitPoint)
+    ECCinitPrivKey                           0x08003b29   Thumb Code   110  crypto.o(i.ECCinitPrivKey)
+    ECCkeyGen                                0x08003b97   Thumb Code   216  crypto.o(i.ECCkeyGen)
+    ECCscalarMul                             0x08003c71   Thumb Code   230  crypto.o(i.ECCscalarMul)
+    ECCsetPointCoordinate                    0x08003d5d   Thumb Code    74  crypto.o(i.ECCsetPointCoordinate)
+    ECCsetPointGenerator                     0x08003da9   Thumb Code   122  crypto.o(i.ECCsetPointGenerator)
+    ECCvalidatePubKey                        0x08003e29   Thumb Code   602  crypto.o(i.ECCvalidatePubKey)
+    ECDSAfreeSign                            0x08004089   Thumb Code    56  crypto.o(i.ECDSAfreeSign)
+    ECDSAgetSignature                        0x080040c1   Thumb Code   160  crypto.o(i.ECDSAgetSignature)
+    ECDSAinitSign                            0x08004165   Thumb Code   124  crypto.o(i.ECDSAinitSign)
+    ECDSAsetSignature                        0x080041e1   Thumb Code    48  crypto.o(i.ECDSAsetSignature)
+    ECDSAsign                                0x08004211   Thumb Code  1378  crypto.o(i.ECDSAsign)
+    ECDSAverify                              0x08004773   Thumb Code   810  crypto.o(i.ECDSAverify)
+    FastDiv2                                 0x08004a9d   Thumb Code    98  crypto.o(i.FastDiv2)
+    GenRndBNmodN                             0x08004aff   Thumb Code   274  crypto.o(i.GenRndBNmodN)
+    InitBig                                  0x08004c11   Thumb Code   104  crypto.o(i.InitBig)
+    LeftShift                                0x08004c79   Thumb Code   144  crypto.o(i.LeftShift)
+    ModularAddBig                            0x08004d09   Thumb Code    68  crypto.o(i.ModularAddBig)
+    ModularFastMul2                          0x08004d4d   Thumb Code   138  crypto.o(i.ModularFastMul2)
+    ModularInvBig                            0x08004dd7   Thumb Code   540  crypto.o(i.ModularInvBig)
+    MontyExit                                0x08004ff3   Thumb Code    88  crypto.o(i.MontyExit)
+    MontyInit                                0x0800504d   Thumb Code   874  crypto.o(i.MontyInit)
+    MontyJacProjAddPoints                    0x080053b7   Thumb Code   894  crypto.o(i.MontyJacProjAddPoints)
+    MontyJacProjDoublePoint                  0x08005735   Thumb Code   778  crypto.o(i.MontyJacProjDoublePoint)
+    MontyKillAll                             0x08005a3f   Thumb Code    48  crypto.o(i.MontyKillAll)
+    MontyMul                                 0x08005a71   Thumb Code   524  crypto.o(i.MontyMul)
+    NAF_Binary_PointMul                      0x08005c7d   Thumb Code   854  crypto.o(i.NAF_Binary_PointMul)
+    Normalize                                0x08005fd9   Thumb Code   368  crypto.o(i.Normalize)
+    RNGfree                                  0x08006149   Thumb Code    50  crypto.o(i.RNGfree)
+    RNGinit                                  0x0800617d   Thumb Code   234  crypto.o(i.RNGinit)
+    RightShift                               0x0800626d   Thumb Code   176  crypto.o(i.RightShift)
+    SHA256Final                              0x0800631d   Thumb Code   390  crypto.o(i.SHA256Final)
+    SHA256Update                             0x080066fd   Thumb Code   154  crypto.o(i.SHA256Update)
+    SHA256_Append                            0x08006797   Thumb Code    42  crypto.o(i.SHA256_Append)
+    SHA256_Finish                            0x080067c1   Thumb Code   144  crypto.o(i.SHA256_Finish)
+    SHA256_Init                              0x08006851   Thumb Code    60  crypto.o(i.SHA256_Init)
+    SetZeroBig                               0x080068ad   Thumb Code    70  crypto.o(i.SetZeroBig)
+    StAllocBig                               0x080068f3   Thumb Code    66  crypto.o(i.StAllocBig)
+    StFreeBig                                0x08006935   Thumb Code    36  crypto.o(i.StFreeBig)
+    SubBig                                   0x08006959   Thumb Code   234  crypto.o(i.SubBig)
+    Sub_Moduli_Big                           0x08006a43   Thumb Code   436  crypto.o(i.Sub_Moduli_Big)
+    W8_to_Big                                0x08006bf9   Thumb Code   326  crypto.o(i.W8_to_Big)
+    crl_DRBG_AES128_Generate                 0x08006d41   Thumb Code   450  crypto.o(i.crl_DRBG_AES128_Generate)
+    P_192_a                                  0x08006f02   Data          24  user_ecc.o(.constdata)
+    P_192_b                                  0x08006f1a   Data          24  user_ecc.o(.constdata)
+    P_192_p                                  0x08006f32   Data          24  user_ecc.o(.constdata)
+    P_192_n                                  0x08006f4a   Data          24  user_ecc.o(.constdata)
+    P_192_Gx                                 0x08006f62   Data          24  user_ecc.o(.constdata)
+    P_192_Gy                                 0x08006f7a   Data          24  user_ecc.o(.constdata)
+    pub_x_192                                0x08006f92   Data          24  user_ecc.o(.constdata)
+    pub_y_192                                0x08006faa   Data          24  user_ecc.o(.constdata)
+    sign_r_192                               0x08006fc2   Data          24  user_ecc.o(.constdata)
+    sign_s_192                               0x08006fda   Data          24  user_ecc.o(.constdata)
+    Sbox                                     0x08006ff4   Data         256  crypto.o(.constdata)
+    InvSbox                                  0x080070f4   Data         256  crypto.o(.constdata)
+    rcon                                     0x080071f4   Data          40  crypto.o(.constdata)
+    enc_table                                0x0800721c   Data        1024  crypto.o(.constdata)
+    dec_table                                0x0800761c   Data        1024  crypto.o(.constdata)
+    SP1                                      0x08007c3c   Data         256  crypto.o(.constdata)
+    SP2                                      0x08007d3c   Data         256  crypto.o(.constdata)
+    SP3                                      0x08007e3c   Data         256  crypto.o(.constdata)
+    SP4                                      0x08007f3c   Data         256  crypto.o(.constdata)
+    SP5                                      0x0800803c   Data         256  crypto.o(.constdata)
+    SP6                                      0x0800813c   Data         256  crypto.o(.constdata)
+    SP7                                      0x0800823c   Data         256  crypto.o(.constdata)
+    SP8                                      0x0800833c   Data         256  crypto.o(.constdata)
+    K256                                     0x0800843c   Data         256  crypto.o(.constdata)
+    Region$$Table$$Base                      0x080087b4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080087d4   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_stm32f10x.o(.data)
+    AHBPrescTable                            0x20000004   Data          16  system_stm32f10x.o(.data)
+    InputMessage_192                         0x20000014   Data          12  main2.o(.data)
+    timecount                                0x20000020   Data           4  timer.o(.data)
+    USART_RX_STA                             0x20000028   Data           1  usart.o(.data)
+    __stdout                                 0x2000002c   Data           4  usart.o(.data)
+    MessDigest_t1                            0x20001044   Data          32  user_ecc.o(.bss)
+    pub_x                                    0x20001064   Data          50  user_ecc.o(.bss)
+    pub_y                                    0x20001096   Data          50  user_ecc.o(.bss)
+    sign_r                                   0x200010c8   Data          50  user_ecc.o(.bss)
+    sign_s                                   0x200010fa   Data          50  user_ecc.o(.bss)
+    P_key                                    0x2000112c   Data         200  main2.o(.bss)
+    result                                   0x200011f4   Data         128  main2.o(.bss)
+    result1                                  0x20001274   Data         128  main2.o(.bss)
+    result_pubkey                            0x200012f4   Data          64  main2.o(.bss)
+    USART_RX_BUF                             0x20001334   Data          64  usart.o(.bss)
+    __libspace_start                         0x20001374   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x200013d4   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000ed
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00008818, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000087d4, Max: 0x00080000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x000000ec   Data   RO          482    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x00000008   Code   RO         1076  * !!!main             c_w.l(__main.o)
+    0x080000f4   0x00000034   Code   RO         1241    !!!scatter          c_w.l(__scatter.o)
+    0x08000128   0x0000001a   Code   RO         1243    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000142   0x00000002   PAD
+    0x08000144   0x0000001c   Code   RO         1245    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000160   0x00000000   Code   RO         1067    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
+    0x08000160   0x00000006   Code   RO         1066    .ARM.Collect$$_printf_percent$$00000009  c_w.l(_printf_d.o)
+    0x08000166   0x00000006   Code   RO         1065    .ARM.Collect$$_printf_percent$$0000000C  c_w.l(_printf_x.o)
+    0x0800016c   0x00000004   Code   RO         1085    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
+    0x08000170   0x00000002   Code   RO         1118    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x08000172   0x00000000   Code   RO         1125    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1128    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1130    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1132    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1135    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1137    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1139    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1141    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1143    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1145    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1147    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1149    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1151    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1153    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1155    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1159    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1161    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1163    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000172   0x00000000   Code   RO         1165    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000172   0x00000002   Code   RO         1166    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
+    0x08000174   0x00000002   Code   RO         1184    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x08000176   0x00000000   Code   RO         1195    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
+    0x08000176   0x00000000   Code   RO         1198    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x08000176   0x00000000   Code   RO         1201    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x08000176   0x00000000   Code   RO         1203    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
+    0x08000176   0x00000000   Code   RO         1206    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x08000176   0x00000002   Code   RO         1207    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x08000178   0x00000000   Code   RO         1080    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
+    0x08000178   0x00000000   Code   RO         1087    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
+    0x08000178   0x00000006   Code   RO         1099    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
+    0x0800017e   0x00000000   Code   RO         1089    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
+    0x0800017e   0x00000004   Code   RO         1090    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
+    0x08000182   0x00000000   Code   RO         1092    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
+    0x08000182   0x00000008   Code   RO         1093    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
+    0x0800018a   0x00000002   Code   RO         1122    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x0800018c   0x00000000   Code   RO         1168    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x0800018c   0x00000004   Code   RO         1169    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000190   0x00000006   Code   RO         1170    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000196   0x0000001a   Code   RO            1    .text               stm32f10x_it.o
+    0x080001b0   0x000001c8   Code   RO          104    .text               system_stm32f10x.o
+    0x08000378   0x00000560   Code   RO          122    .text               user_ecc.o
+    0x080008d8   0x000000dc   Code   RO          327    .text               main2.o
+    0x080009b4   0x00000058   Code   RO          377    .text               led.o
+    0x08000a0c   0x00000084   Code   RO          405    .text               timer.o
+    0x08000a90   0x000000a8   Code   RO          420    .text               delay.o
+    0x08000b38   0x00000140   Code   RO          446    .text               usart.o
+    0x08000c78   0x00000040   Code   RO          483    .text               startup_stm32f10x_md.o
+    0x08000cb8   0x000000dc   Code   RO          487    .text               misc.o
+    0x08000d94   0x00000358   Code   RO          523    .text               stm32f10x_gpio.o
+    0x080010ec   0x0000039c   Code   RO          535    .text               stm32f10x_rcc.o
+    0x08001488   0x00000e1a   Code   RO          549    .text               stm32f10x_tim.o
+    0x080022a2   0x00000002   PAD
+    0x080022a4   0x00000408   Code   RO          561    .text               stm32f10x_usart.o
+    0x080026ac   0x00000002   Code   RO         1014    .text               c_w.l(use_no_semi_2.o)
+    0x080026ae   0x00000002   PAD
+    0x080026b0   0x00000018   Code   RO         1018    .text               c_w.l(noretval__2printf.o)
+    0x080026c8   0x0000006a   Code   RO         1020    .text               c_w.l(__printf.o)
+    0x08002732   0x00000002   PAD
+    0x08002734   0x00000078   Code   RO         1022    .text               c_w.l(_printf_dec.o)
+    0x080027ac   0x0000005c   Code   RO         1027    .text               c_w.l(_printf_hex_int.o)
+    0x08002808   0x0000008a   Code   RO         1068    .text               c_w.l(rt_memcpy_v6.o)
+    0x08002892   0x00000064   Code   RO         1070    .text               c_w.l(rt_memcpy_w.o)
+    0x080028f6   0x0000004e   Code   RO         1072    .text               c_w.l(rt_memclr_w.o)
+    0x08002944   0x00000006   Code   RO         1074    .text               c_w.l(heapauxi.o)
+    0x0800294a   0x00000002   Code   RO         1078    .text               c_w.l(use_no_semi.o)
+    0x0800294c   0x000000b8   Code   RO         1081    .text               c_w.l(_printf_intcommon.o)
+    0x08002a04   0x00000024   Code   RO         1083    .text               c_w.l(_printf_char_file.o)
+    0x08002a28   0x00000030   Code   RO         1101    .text               c_w.l(_printf_char_common.o)
+    0x08002a58   0x00000008   Code   RO         1103    .text               c_w.l(ferror.o)
+    0x08002a60   0x0000004a   Code   RO         1107    .text               c_w.l(sys_stackheap_outer.o)
+    0x08002aaa   0x0000000c   Code   RO         1111    .text               c_w.l(exit.o)
+    0x08002ab6   0x00000002   PAD
+    0x08002ab8   0x00000008   Code   RO         1119    .text               c_w.l(libspace.o)
+    0x08002ac0   0x00000310   Code   RO          576    i.AES128_encrypt    M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08002dd0   0x00000074   Code   RO          578    i.AES128_keyschedule_enc  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08002e44   0x0000013e   Code   RO          640    i.AddBig            M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08002f82   0x00000002   PAD
+    0x08002f84   0x000001c6   Code   RO          641    i.Add_Moduli_Big    M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800314a   0x00000002   PAD
+    0x0800314c   0x000000b4   Code   RO          642    i.Big_to_W8         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003200   0x0000008c   Code   RO          643    i.Big_to_fixedW8    M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800328c   0x000000a6   Code   RO          644    i.CompareBig        M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003332   0x00000002   PAD
+    0x08003334   0x0000009e   Code   RO          645    i.CopyBig           M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080033d2   0x00000030   Code   RO          646    i.CountBits         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003402   0x00000008   Code   RO          648    i.Crypto_DeInit     M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800340a   0x00000002   PAD
+    0x0800340c   0x00000180   Code   RO          662    i.DRBG_AES128_Block_cipher_df  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800358c   0x00000086   Code   RO          663    i.DRBG_AES128_Update  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003612   0x00000066   Code   RO          664    i.ECCcopyPoint      M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003678   0x0000007c   Code   RO          665    i.ECCfreeEC         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080036f4   0x00000042   Code   RO          666    i.ECCfreePoint      M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003736   0x0000002e   Code   RO          667    i.ECCfreePrivKey    M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003764   0x000000bc   Code   RO          668    i.ECCgetPointCoordinate  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003820   0x00000080   Code   RO          670    i.ECCgetPrivKeyValue  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080038a0   0x000001b8   Code   RO          671    i.ECCinitEC         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003a58   0x000000d0   Code   RO          672    i.ECCinitPoint      M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003b28   0x0000006e   Code   RO          673    i.ECCinitPrivKey    M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003b96   0x000000d8   Code   RO          674    i.ECCkeyGen         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003c6e   0x00000002   PAD
+    0x08003c70   0x000000ec   Code   RO          677    i.ECCscalarMul      M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003d5c   0x0000004a   Code   RO          678    i.ECCsetPointCoordinate  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003da6   0x00000002   PAD
+    0x08003da8   0x00000080   Code   RO          680    i.ECCsetPointGenerator  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08003e28   0x00000260   Code   RO          683    i.ECCvalidatePubKey  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004088   0x00000038   Code   RO          684    i.ECDSAfreeSign     M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080040c0   0x000000a4   Code   RO          685    i.ECDSAgetSignature  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004164   0x0000007c   Code   RO          686    i.ECDSAinitSign     M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080041e0   0x00000030   Code   RO          687    i.ECDSAsetSignature  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004210   0x00000562   Code   RO          688    i.ECDSAsign         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004772   0x0000032a   Code   RO          689    i.ECDSAverify       M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004a9c   0x00000062   Code   RO          691    i.FastDiv2          M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004afe   0x00000112   Code   RO          696    i.GenRndBNmodN      M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004c10   0x00000068   Code   RO          710    i.InitBig           M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004c78   0x00000090   Code   RO          712    i.LeftShift         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004d08   0x00000044   Code   RO          716    i.ModularAddBig     M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004d4c   0x0000008a   Code   RO          718    i.ModularFastMul2   M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004dd6   0x0000021c   Code   RO          719    i.ModularInvBig     M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08004ff2   0x00000058   Code   RO          721    i.MontyExit         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800504a   0x00000002   PAD
+    0x0800504c   0x0000036a   Code   RO          722    i.MontyInit         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080053b6   0x0000037e   Code   RO          723    i.MontyJacProjAddPoints  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08005734   0x0000030a   Code   RO          724    i.MontyJacProjDoublePoint  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08005a3e   0x00000030   Code   RO          725    i.MontyKillAll      M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08005a6e   0x00000002   PAD
+    0x08005a70   0x0000020c   Code   RO          727    i.MontyMul          M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08005c7c   0x0000035c   Code   RO          729    i.NAF_Binary_PointMul  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08005fd8   0x00000170   Code   RO          730    i.Normalize         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006148   0x00000032   Code   RO          731    i.RNGfree           M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800617a   0x00000002   PAD
+    0x0800617c   0x000000f0   Code   RO          734    i.RNGinit           M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800626c   0x000000b0   Code   RO          740    i.RightShift        M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800631c   0x00000186   Code   RO          753    i.SHA256Final       M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080064a2   0x00000002   PAD
+    0x080064a4   0x00000258   Code   RO          755    i.SHA256Transform   M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080066fc   0x0000009a   Code   RO          756    i.SHA256Update      M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006796   0x0000002a   Code   RO          757    i.SHA256_Append     M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080067c0   0x00000090   Code   RO          758    i.SHA256_Finish     M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006850   0x0000005c   Code   RO          759    i.SHA256_Init       M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080068ac   0x00000046   Code   RO          760    i.SetZeroBig        M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x080068f2   0x00000042   Code   RO          762    i.StAllocBig        M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006934   0x00000024   Code   RO          763    i.StFreeBig         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006958   0x000000ea   Code   RO          764    i.SubBig            M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006a42   0x000001b4   Code   RO          765    i.Sub_Moduli_Big    M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006bf6   0x00000002   PAD
+    0x08006bf8   0x00000146   Code   RO          780    i.W8_to_Big         M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006d3e   0x00000002   PAD
+    0x08006d40   0x000001c2   Code   RO          781    i.crl_DRBG_AES128_Generate  M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x08006f02   0x000000f0   Data   RO          124    .constdata          user_ecc.o
+    0x08006ff2   0x00000002   PAD
+    0x08006ff4   0x00001798   Data   RO          792    .constdata          M3_CryptoFW_2_0_6.lib(crypto.o)
+    0x0800878c   0x00000028   Data   RO         1028    .constdata          c_w.l(_printf_hex_int.o)
+    0x080087b4   0x00000020   Data   RO         1239    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x000019d8, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000014   Data   RW          105    .data               system_stm32f10x.o
+    0x20000014   0x0000000c   Data   RW          329    .data               main2.o
+    0x20000020   0x00000004   Data   RW          406    .data               timer.o
+    0x20000024   0x00000004   Data   RW          421    .data               delay.o
+    0x20000028   0x00000008   Data   RW          448    .data               usart.o
+    0x20000030   0x00000014   Data   RW          536    .data               stm32f10x_rcc.o
+    0x20000044   0x000010e8   Zero   RW          123    .bss                user_ecc.o
+    0x2000112c   0x00000208   Zero   RW          328    .bss                main2.o
+    0x20001334   0x00000040   Zero   RW          447    .bss                usart.o
+    0x20001374   0x00000060   Zero   RW         1120    .bss                c_w.l(libspace.o)
+    0x200013d4   0x00000004   PAD
+    0x200013d8   0x00000200   Zero   RW          481    HEAP                startup_stm32f10x_md.o
+    0x200015d8   0x00000400   Zero   RW          480    STACK               startup_stm32f10x_md.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+         0          0          0          0          0         32   core_cm3.o
+       168         10          0          4          0        911   delay.o
+        88          8          0          0          0        435   led.o
+       220         30          0         12        520       1473   main2.o
+       220         20          0          0          0       1661   misc.o
+        64         26        236          0       1536        720   startup_stm32f10x_md.o
+       856         40          0          0          0       5505   stm32f10x_gpio.o
+        26          0          0          0          0      48546   stm32f10x_it.o
+       924         44          0         20          0       8604   stm32f10x_rcc.o
+      3610         88          0          0          0      21992   stm32f10x_tim.o
+      1032         22          0          0          0       8232   stm32f10x_usart.o
+       456         36          0         20          0       1535   system_stm32f10x.o
+       132         10          0          4          0        876   timer.o
+       320         18          0          8         64       2890   usart.o
+      1376        220        240          0       4328     215809   user_ecc.o
+
+    ----------------------------------------------------------------------
+      9494        572        510         68       6448     319221   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          2          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+     17450        130       6040          0          0       5680   crypto.o
+         8          0          0          0          0         68   __main.o
+       106          0          0          0          0         84   __printf.o
+        52          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+        48          6          0          0          0         96   _printf_char_common.o
+        36          4          0          0          0         80   _printf_char_file.o
+         6          0          0          0          0          0   _printf_d.o
+       120         18          0          0          0         92   _printf_dec.o
+        92          4         40          0          0         88   _printf_hex_int.o
+       184          0          0          0          0         88   _printf_intcommon.o
+         0          0          0          0          0          0   _printf_percent.o
+         4          0          0          0          0          0   _printf_percent_end.o
+         6          0          0          0          0          0   _printf_x.o
+        12          0          0          0          0         72   exit.o
+         8          0          0          0          0         68   ferror.o
+         6          0          0          0          0        152   heapauxi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+        24          4          0          0          0         84   noretval__2printf.o
+        78          0          0          0          0         80   rt_memclr_w.o
+       138          0          0          0          0         68   rt_memcpy_v6.o
+       100          0          0          0          0         80   rt_memcpy_w.o
+         0          0          0          0          0          0   rtentry.o
+        12          0          0          0          0          0   rtentry2.o
+         6          0          0          0          0          0   rtentry4.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+         2          0          0          0          0         68   use_no_semi_2.o
+
+    ----------------------------------------------------------------------
+     18688        178       6080          0        100       7164   Library Totals
+        32          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+     17450        130       6040          0          0       5680   M3_CryptoFW_2_0_6.lib
+      1206         48         40          0         96       1484   c_w.l
+
+    ----------------------------------------------------------------------
+     18688        178       6080          0        100       7164   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     28182        750       6590         68       6548     321237   Grand Totals
+     28182        750       6590         68       6548     321237   ELF Image Totals
+     28182        750       6590         68          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                34772 (  33.96kB)
+    Total RW  Size (RW Data + ZI Data)              6616 (   6.46kB)
+    Total ROM Size (Code + RO Data + RW Data)      34840 (  34.02kB)
+
+==============================================================================
+
